@@ -1,0 +1,40 @@
+{
+  "name": "nm-api",
+  "version": "1.0.0",
+  "description": "NetworkManager DBUS API",
+  "license": "Apache-2.0",
+  "author": "Resin.io Ltd (https://resin.io)",
+  "contributors": [
+    "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de)"
+  ],
+  "keywords": [
+    "nm",
+    "nmcli",
+    "network",
+    "manager",
+    "networkmanager",
+    "dbus",
+    "api"
+  ],
+  "main": "lib/nm.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "standard",
+    "lint-fix": "standard --fix"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "standard": "^11.0.1"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "homepage": "https://github.com/resin-io-modules/nm-api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/resin-io-modules/nm-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/resin-io-modules/nm-api/issues"
+  }
+}
