@@ -19,8 +19,8 @@
   "main": "lib/nm.js",
   "scripts": {
     "test": "mocha",
-    "lint": "standard",
-    "lint-fix": "standard --fix"
+    "lint": "standard lib && standard --env mocha test",
+    "lint-fix": "standard --fix lib && standard --fix --env mocha test"
   },
   "dependencies": {},
   "devDependencies": {
