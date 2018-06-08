@@ -11,3 +11,7 @@ NetworkManager DBUS API
 ```console
 $ npm install --save nm-api
 ```
+
+## References
+
+- [NetworkManager DBUS Types](https://developer.gnome.org/NetworkManager/stable/nm-dbus-types.html)
