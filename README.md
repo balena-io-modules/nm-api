@@ -12,6 +12,22 @@ NetworkManager DBUS API
 $ npm install --save nm-api
 ```
 
+## Use
+To start `nm-api` as an HTTP server (default port defined internally is `1337`):
+```javascript
+const nm = require(’nm-api’);
+
+const port = Number(process.env.NM_SERVICE_API_PORT) || 1338;
+
+nm.HttpServer(port)
+.then(() => {
+  console.log(`NetworkManager HTTP APIs running on port ${port}`);
+})
+.catch((err) => {
+  console.error('Something went wrong when starting nm-api', err);
+});
+```
+
 ## References
 
 - [NetworkManager DBUS Types](https://developer.gnome.org/NetworkManager/stable/nm-dbus-types.html)

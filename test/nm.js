@@ -1,9 +1,9 @@
-var assert = require('assert')
+const assert = require('assert');
+// const nm = require('../dist')
 
-describe('nm-api', function() {
-
-  specify('example', function() {
-    assert.ok(true)
-  })
-
-})
+describe('nm-api', () => {
+	specify('run module', (done) => {
+		assert.ok(true);
+		done();
+	});
+});

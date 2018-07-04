@@ -16,16 +16,40 @@
     "dbus",
     "api"
   ],
-  "main": "lib/nm.js",
+  "main": "dist/index.js",
   "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc lib/index.ts --outDir dist/",
     "test": "mocha",
+    "build-test": "npm run build && npm run test",
     "lint": "standard lib && standard --env mocha test",
-    "lint-fix": "standard --fix lib && standard --fix --env mocha test"
+    "lint-fix": "standard --fix lib && standard --fix --env mocha test",
+    "sync-1": "resin sync 426183b --source dist/ --destination /usr/src/app",
+    "sync-2": "resin sync 30bae16 --source dist/ --destination /usr/src/app",
+    "build-sync-1": "npm run build && npm run sync-1",
+    "build-sync-2": "npm run build && npm run sync-2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "dbus-native": "^0.2.5",
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "uuid": "^3.3.2"
+  },
   "devDependencies": {
+    "@types/bluebird": "^3.5.21",
+    "@types/express": "^4.16.0",
+    "@types/lodash": "^4.14.110",
+    "@types/mocha": "^5.2.4",
+    "@types/node": "^10.5.1",
+    "@types/uuid": "^3.4.3",
     "mocha": "^5.2.0",
-    "standard": "^11.0.1"
+    "standard": "^11.0.1",
+    "ts-loader": "^4.4.2",
+    "typescript": "^2.9.2",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-node-externals": "^1.7.2"
   },
   "peerDependencies": {},
   "optionalDependencies": {},
