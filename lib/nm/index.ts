@@ -1,5 +1,5 @@
 import * as Bluebird from 'bluebird';
-import dbus from 'dbus-native';
+import * as dbus from 'dbus-native';
 import * as _ from 'lodash';
 import {NetworkManagerTypes} from './types';
 
@@ -126,47 +126,45 @@ export class NetworkManager extends NetworkManagerTypes {
 	};
 
 	connectNetwork = async (network) => {
-		const connectionParam = [
-			['connection', [
-				['id', ['s', network.ssid]],
-				['type', ['s', '802-11-wireless']],
-			]],
-			['802-11-wireless', [
-				['ssid', ['ay', [stringToArrayOfBytes(network.ssid)]]],
-				['mode', ['s', 'infrastructure']],
-			]],
-			['802-11-wireless-security', [
-				['auth-alg', ['s', 'open']],
-				['key-mgmt', ['s', 'wpa-psk']],
-				['psk', ['s', network.passphrase]],
-			]],
-			['ipv4', [
-				['method', ['s', 'auto']],
-			]],
-			['ipv6', [
-				['method', ['s', 'auto']],
-			]],
-		];
-
-		const ap: AccessPoint|any = _.find(this.accessPoints, (props) => {
-			return props.Ssid.toString() === network.ssid;
-		});
-		if (_.isUndefined(ap)) {
-			return Bluebird.reject(formatError(404, `Could not find neaby AccessPoints with SSID: ${network.ssid}`));
-		}
-
 		try {
+			const connectionParam = [
+				['connection', [
+					['id', ['s', network.ssid]],
+					['type', ['s', '802-11-wireless']],
+				]],
+				['802-11-wireless', [
+					['ssid', ['ay', [stringToArrayOfBytes(network.ssid)]]],
+					['mode', ['s', 'infrastructure']],
+				]],
+				['802-11-wireless-security', [
+					['auth-alg', ['s', 'open']],
+					['key-mgmt', ['s', 'wpa-psk']],
+					['psk', ['s', network.passphrase]],
+				]],
+				['ipv4', [
+					['method', ['s', 'auto']],
+				]],
+				['ipv6', [
+					['method', ['s', 'auto']],
+				]],
+			];
+
+			const ap: AccessPoint|any = _.find(this.accessPoints, (props) => {
+				return props.Ssid.toString() === network.ssid;
+			});
+			if (_.isUndefined(ap)) {
+				throw formatError(404, `Could not find nearby AccessPoints with SSID: ${network.ssid}`);
+			}
+
 			// Check if network's already registered on the device
 			const results = await this.listConnections();
 			const wifiConnection = findConnection(results, network);
 			if (!_.isUndefined(wifiConnection)) {
-				await this.activateConnection([wifiConnection.path, this.devices.wifi.path, '/']);
-				return;
+				return await this.activateConnection([wifiConnection.path, this.devices.wifi.path, '/']);
 			}
 
 			const networkSettings = await this.addConnection(connectionParam);
-			await this.activateConnection([networkSettings, this.devices.wifi.path, '/']);
-			return;
+			return await this.activateConnection([networkSettings, this.devices.wifi.path, '/']);
 		} catch (err) {
 			throw formatError(500, 'Could not connectNetwork', err);
 		}
@@ -200,23 +198,30 @@ export class NetworkManager extends NetworkManagerTypes {
 				['ssids', ['aay', [stringToArrayOfBytes('1')]]],
 			];
 			await this.requestScan(requestScanParams);
-			const {AccessPoints} = await this.getObjectProperty(['org.freedesktop.NetworkManager.Device.Wireless', 'AccessPoints'], this.devices.wifi.path);
-			const getApsProperties = () => _.map(AccessPoints, this.getApProperties);
-			const rawAccessPoints = await Bluebird.all(getApsProperties());
-			const accessPoints = _.map(rawAccessPoints, (rawProps: any[]) => {
-				const props = _.reduce(rawProps, (acc, prop: any) => {
-					return {
-						...acc,
-						...prop,
-					};
-				}, {});
-				return props;
-			});
-			this.accessPoints = accessPoints;
-			return makeNetworksReadable(this.accessPoints);
+			return this.getAccessPoints(this.devices.wifi.path);
 		} catch (err) {
+			if (_.isArray(err) && (err[0] === 'Scanning not allowed while already scanning' || err[0] === 'Scanning not allowed immediately following previous scan')) {
+				return this.getAccessPoints(this.devices.wifi.path);
+			}
 			throw formatError(500, `Could not listNearbyNetworks`, err);
 		}
+	}
+
+	getAccessPoints = async (wifiDevicePath) => {
+		const {AccessPoints} = await this.getObjectProperty(['org.freedesktop.NetworkManager.Device.Wireless', 'AccessPoints'], wifiDevicePath);
+		const getApsProperties = () => _.map(AccessPoints, this.getApProperties);
+		const rawAccessPoints = await Bluebird.all(getApsProperties());
+		const accessPoints = _.map(rawAccessPoints, (rawProps: any[]) => {
+			const props = _.reduce(rawProps, (acc, prop: any) => {
+				return {
+					...acc,
+					...prop,
+				};
+			}, {});
+			return props;
+		});
+		this.accessPoints = accessPoints;
+		return makeNetworksReadable(this.accessPoints);
 	}
 
 	getApProperties = async (path) => {
@@ -240,9 +245,15 @@ export class NetworkManager extends NetworkManagerTypes {
 			const getConnectionsType = () => _.map(connections, _.partial(this.getObjectProperty, ['org.freedesktop.NetworkManager.Connection.Active', 'Type']));
 			const results = await Bluebird.all(getConnectionsType());
 			const wifiConnection: any = _.filter(results, ({Type}) => Type === '802-11-wireless')[0];
+			if (_.isUndefined(wifiConnection)) {
+				return;
+			}
 			const {Id} = await this.getObjectProperty(['org.freedesktop.NetworkManager.Connection.Active', 'Id'], wifiConnection.path);
 			return Id;
 		} catch (err) {
+			if (err === 404) {
+				throw formatError(404, 'You\'re not currently connected to a wireless network');
+			}
 			throw formatError(500, `Could not getCurrentNetwork`, err);
 		}
 	}

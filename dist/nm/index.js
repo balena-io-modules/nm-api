@@ -54,9 +54,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var Bluebird = require("bluebird");
+var dbus = require("dbus-native");
 var _ = require("lodash");
 var types_1 = require("./types");
-var dbus = require('dbus-native');
 var systemBus = dbus.systemBus();
 var service = ['org', 'freedesktop', 'NetworkManager'];
 var NetworkManager = /** @class */ (function (_super) {
@@ -113,22 +113,25 @@ var NetworkManager = /** @class */ (function (_super) {
         _this.getObjectProperty = function (_a, path) {
             var iface = _a[0], prop = _a[1];
             return __awaiter(_this, void 0, void 0, function () {
-                var _b, _c, err, _d, key, value;
-                return __generator(this, function (_e) {
-                    switch (_e.label) {
-                        case 0: return [4 /*yield*/, to(this.callMethod(path)('org.freedesktop.DBus.Properties')(['Get', 'ss'])([iface, prop]))];
+                var _b, _c, key, value, err_2;
+                return __generator(this, function (_d) {
+                    switch (_d.label) {
+                        case 0:
+                            _d.trys.push([0, 2, , 3]);
+                            return [4 /*yield*/, this.callMethod(path)('org.freedesktop.DBus.Properties')(['Get', 'ss'])([iface, prop])];
                         case 1:
-                            _c = _e.sent(), err = _c[0], _d = _c[1], key = _d[0], value = _d[1][0];
-                            if (err) {
-                                throw formatError(500, "Could not getObjectProperty on " + path, err);
-                            }
+                            _c = _d.sent(), key = _c[0], value = _c[1][0];
                             return [2 /*return*/, (_b = { path: path }, _b[prop] = value, _b)];
+                        case 2:
+                            err_2 = _d.sent();
+                            throw formatError(500, "Could not getObjectProperty on " + path, err_2);
+                        case 3: return [2 /*return*/];
                     }
                 });
             });
         };
         _this.getWifiDevice = function () { return __awaiter(_this, void 0, void 0, function () {
-            var devices_1, getDevicesProperty, devicesTypes, wifiDevices, err_2;
+            var devices_1, getDevicesProperty, devicesTypes, wifiDevices, err_3;
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -148,14 +151,14 @@ var NetworkManager = /** @class */ (function (_super) {
                         this.devices.wifi = wifiDevices[0];
                         return [2 /*return*/, this.devices.wifi];
                     case 3:
-                        err_2 = _a.sent();
-                        throw formatError(500, "Could not getWifiDevice", err_2);
+                        err_3 = _a.sent();
+                        throw formatError(500, "Could not getWifiDevice", err_3);
                     case 4: return [2 /*return*/];
                 }
             });
         }); };
         _this.getDeviceStatus = function (device) { return __awaiter(_this, void 0, void 0, function () {
-            var State, err_3;
+            var State, err_4;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -165,8 +168,8 @@ var NetworkManager = /** @class */ (function (_super) {
                         State = (_a.sent()).State;
                         return [2 /*return*/, State];
                     case 2:
-                        err_3 = _a.sent();
-                        throw formatError(500, "Could not getDeviceStatus", err_3);
+                        err_4 = _a.sent();
+                        throw formatError(500, "Could not getDeviceStatus", err_4);
                     case 3: return [2 /*return*/];
                 }
             });
@@ -179,7 +182,7 @@ var NetworkManager = /** @class */ (function (_super) {
         _this.requestScan = function (params) { return _this.callMethod(_this.devices.wifi.path)('org.freedesktop.NetworkManager.Device.Wireless')(['RequestScan', 'a{sv}'])([params]); };
         _this.getActiveConnections = function () { return _this.callMethod()('org.freedesktop.DBus.Properties')(['Get', 'ss'])(['org.freedesktop.NetworkManager', 'ActiveConnections']); };
         _this.getConnectionSettings = function (path) { return __awaiter(_this, void 0, void 0, function () {
-            var value, err_4;
+            var value, err_5;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -189,17 +192,18 @@ var NetworkManager = /** @class */ (function (_super) {
                         value = _a.sent();
                         return [2 /*return*/, { path: path, settings: value }];
                     case 2:
-                        err_4 = _a.sent();
-                        throw formatError(500, "Could not getConnectionSettings on " + path, err_4);
+                        err_5 = _a.sent();
+                        throw formatError(500, "Could not getConnectionSettings on " + path, err_5);
                     case 3: return [2 /*return*/];
                 }
             });
         }); };
         _this.connectNetwork = function (network) { return __awaiter(_this, void 0, void 0, function () {
-            var connectionParam, ap, results, wifiConnection, networkSettings, err_5;
+            var connectionParam, ap, results, wifiConnection, networkSettings, err_6;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
+                        _a.trys.push([0, 6, , 7]);
                         connectionParam = [
                             ['connection', [
                                     ['id', ['s', network.ssid]],
@@ -225,36 +229,29 @@ var NetworkManager = /** @class */ (function (_super) {
                             return props.Ssid.toString() === network.ssid;
                         });
                         if (_.isUndefined(ap)) {
-                            return [2 /*return*/, Bluebird.reject(formatError(404, "Could not find neaby AccessPoints with SSID: " + network.ssid))];
+                            throw formatError(404, "Could not find nearby AccessPoints with SSID: " + network.ssid);
                         }
-                        _a.label = 1;
-                    case 1:
-                        _a.trys.push([1, 7, , 8]);
                         return [4 /*yield*/, this.listConnections()];
-                    case 2:
+                    case 1:
                         results = _a.sent();
                         wifiConnection = findConnection(results, network);
-                        if (!!_.isUndefined(wifiConnection)) return [3 /*break*/, 4];
+                        if (!!_.isUndefined(wifiConnection)) return [3 /*break*/, 3];
                         return [4 /*yield*/, this.activateConnection([wifiConnection.path, this.devices.wifi.path, '/'])];
-                    case 3:
-                        _a.sent();
-                        return [2 /*return*/];
-                    case 4: return [4 /*yield*/, this.addConnection(connectionParam)];
-                    case 5:
+                    case 2: return [2 /*return*/, _a.sent()];
+                    case 3: return [4 /*yield*/, this.addConnection(connectionParam)];
+                    case 4:
                         networkSettings = _a.sent();
                         return [4 /*yield*/, this.activateConnection([networkSettings, this.devices.wifi.path, '/'])];
+                    case 5: return [2 /*return*/, _a.sent()];
                     case 6:
-                        _a.sent();
-                        return [2 /*return*/];
-                    case 7:
-                        err_5 = _a.sent();
-                        throw formatError(500, 'Could not connectNetwork', err_5);
-                    case 8: return [2 /*return*/];
+                        err_6 = _a.sent();
+                        throw formatError(500, 'Could not connectNetwork', err_6);
+                    case 7: return [2 /*return*/];
                 }
             });
         }); };
         _this.listConnections = function () { return __awaiter(_this, void 0, void 0, function () {
-            var connections_1, getConnectionsSettings, results, err_6;
+            var connections_1, getConnectionsSettings, results, err_7;
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -269,14 +266,14 @@ var NetworkManager = /** @class */ (function (_super) {
                         results = _a.sent();
                         return [2 /*return*/, results];
                     case 3:
-                        err_6 = _a.sent();
-                        throw formatError(500, "Could not listConnections", err_6);
+                        err_7 = _a.sent();
+                        throw formatError(500, "Could not listConnections", err_7);
                     case 4: return [2 /*return*/];
                 }
             });
         }); };
         _this.forgetNetwork = function (network) { return __awaiter(_this, void 0, void 0, function () {
-            var results, wifiConnection, err_7;
+            var results, wifiConnection, err_8;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -290,31 +287,46 @@ var NetworkManager = /** @class */ (function (_super) {
                         _a.sent();
                         return [2 /*return*/, Bluebird.resolve()];
                     case 3:
-                        err_7 = _a.sent();
-                        throw formatError(500, "Could not forgetNetwork", err_7);
+                        err_8 = _a.sent();
+                        throw formatError(500, "Could not forgetNetwork", err_8);
                     case 4: return [2 /*return*/];
                 }
             });
         }); };
         _this.listNearbyNetworks = function () { return __awaiter(_this, void 0, void 0, function () {
-            var requestScanParams, AccessPoints_1, getApsProperties, rawAccessPoints, accessPoints, err_8;
-            var _this = this;
+            var requestScanParams, err_9;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        _a.trys.push([0, 4, , 5]);
+                        _a.trys.push([0, 2, , 3]);
                         requestScanParams = [
                             ['ssids', ['aay', [stringToArrayOfBytes('1')]]],
                         ];
                         return [4 /*yield*/, this.requestScan(requestScanParams)];
                     case 1:
                         _a.sent();
-                        return [4 /*yield*/, this.getObjectProperty(['org.freedesktop.NetworkManager.Device.Wireless', 'AccessPoints'], this.devices.wifi.path)];
+                        return [2 /*return*/, this.getAccessPoints(this.devices.wifi.path)];
                     case 2:
-                        AccessPoints_1 = (_a.sent()).AccessPoints;
-                        getApsProperties = function () { return _.map(AccessPoints_1, _this.getApProperties); };
+                        err_9 = _a.sent();
+                        if (_.isArray(err_9) && (err_9[0] === 'Scanning not allowed while already scanning' || err_9[0] === 'Scanning not allowed immediately following previous scan')) {
+                            return [2 /*return*/, this.getAccessPoints(this.devices.wifi.path)];
+                        }
+                        throw formatError(500, "Could not listNearbyNetworks", err_9);
+                    case 3: return [2 /*return*/];
+                }
+            });
+        }); };
+        _this.getAccessPoints = function (wifiDevicePath) { return __awaiter(_this, void 0, void 0, function () {
+            var AccessPoints, getApsProperties, rawAccessPoints, accessPoints;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.getObjectProperty(['org.freedesktop.NetworkManager.Device.Wireless', 'AccessPoints'], wifiDevicePath)];
+                    case 1:
+                        AccessPoints = (_a.sent()).AccessPoints;
+                        getApsProperties = function () { return _.map(AccessPoints, _this.getApProperties); };
                         return [4 /*yield*/, Bluebird.all(getApsProperties())];
-                    case 3:
+                    case 2:
                         rawAccessPoints = _a.sent();
                         accessPoints = _.map(rawAccessPoints, function (rawProps) {
                             var props = _.reduce(rawProps, function (acc, prop) {
@@ -324,15 +336,11 @@ var NetworkManager = /** @class */ (function (_super) {
                         });
                         this.accessPoints = accessPoints;
                         return [2 /*return*/, makeNetworksReadable(this.accessPoints)];
-                    case 4:
-                        err_8 = _a.sent();
-                        throw formatError(500, "Could not listNearbyNetworks", err_8);
-                    case 5: return [2 /*return*/];
                 }
             });
         }); };
         _this.getApProperties = function (path) { return __awaiter(_this, void 0, void 0, function () {
-            var props, err_9;
+            var props, err_10;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -348,14 +356,14 @@ var NetworkManager = /** @class */ (function (_super) {
                         props = _a.sent();
                         return [2 /*return*/, props];
                     case 2:
-                        err_9 = _a.sent();
-                        throw formatError(500, "Could not get ap " + path + " property", err_9);
+                        err_10 = _a.sent();
+                        throw formatError(500, "Could not get ap " + path + " property", err_10);
                     case 3: return [2 /*return*/];
                 }
             });
         }); };
         _this.getCurrentNetwork = function () { return __awaiter(_this, void 0, void 0, function () {
-            var _a, key, connections_2, getConnectionsType, results, wifiConnection, Id, err_10;
+            var _a, key, connections_2, getConnectionsType, results, wifiConnection, Id, err_11;
             var _this = this;
             return __generator(this, function (_b) {
                 switch (_b.label) {
@@ -372,13 +380,19 @@ var NetworkManager = /** @class */ (function (_super) {
                             var Type = _a.Type;
                             return Type === '802-11-wireless';
                         })[0];
+                        if (_.isUndefined(wifiConnection)) {
+                            return [2 /*return*/];
+                        }
                         return [4 /*yield*/, this.getObjectProperty(['org.freedesktop.NetworkManager.Connection.Active', 'Id'], wifiConnection.path)];
                     case 3:
                         Id = (_b.sent()).Id;
                         return [2 /*return*/, Id];
                     case 4:
-                        err_10 = _b.sent();
-                        throw formatError(500, "Could not getCurrentNetwork", err_10);
+                        err_11 = _b.sent();
+                        if (err_11 === 404) {
+                            throw formatError(404, 'You\'re not currently connected to a wireless network');
+                        }
+                        throw formatError(500, "Could not getCurrentNetwork", err_11);
                     case 5: return [2 /*return*/];
                 }
             });
@@ -482,7 +496,4 @@ function stringToArrayOfBytes(str) {
 function getProp(s, prop) {
     var _a = s.find(function (s) { return s[0] === prop; }), key = _a[0], value = _a[1];
     return value;
-}
-function to(promise) {
-    return promise.then(function (result) { return [null, result]; })["catch"](function (err) { return [err]; });
 }
