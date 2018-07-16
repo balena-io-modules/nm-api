@@ -59,6 +59,14 @@ var _ = require("lodash");
 var types_1 = require("./types");
 var systemBus = dbus.systemBus();
 var service = ['org', 'freedesktop', 'NetworkManager'];
+var NetworkManagerError = /** @class */ (function (_super) {
+    __extends(NetworkManagerError, _super);
+    function NetworkManagerError(message) {
+        return _super.call(this, message) || this;
+    }
+    return NetworkManagerError;
+}(Error));
+exports.NetworkManagerError = NetworkManagerError;
 var NetworkManager = /** @class */ (function (_super) {
     __extends(NetworkManager, _super);
     function NetworkManager() {
@@ -199,11 +207,12 @@ var NetworkManager = /** @class */ (function (_super) {
             });
         }); };
         _this.connectNetwork = function (network) { return __awaiter(_this, void 0, void 0, function () {
-            var connectionParam, ap, results, wifiConnection, networkSettings, err_6;
+            var netMode, connectionParam, ap, results, wifiConnection, networkSettings, err_6;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 6, , 7]);
+                        netMode = _(NetworkManager.MODE_802_11).filter(function (mode) { return mode === network.mode; }).value();
                         connectionParam = [
                             ['connection', [
                                     ['id', ['s', network.ssid]],
@@ -414,10 +423,13 @@ var NetworkManager = /** @class */ (function (_super) {
     return NetworkManager;
 }(types_1.NetworkManagerTypes));
 exports.NetworkManager = NetworkManager;
-function formatError(type, message, err) {
-    if (type === void 0) { type = 400; }
+function formatError(code, message, err) {
+    if (code === void 0) { code = 400; }
     if (err === void 0) { err = {}; }
-    return { type: type, message: message, err: err };
+    var error = new NetworkManagerError(message);
+    error.data = err;
+    error.code = String(code);
+    return error;
 }
 function findConnection(connections, network) {
     return _.head(_.filter(connections, function (result) {

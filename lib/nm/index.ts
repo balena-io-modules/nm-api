@@ -7,6 +7,16 @@ import {NetworkManagerTypes} from './types';
 const systemBus: any = dbus.systemBus();
 const service: string[] = [ 'org', 'freedesktop', 'NetworkManager' ];
 
+export class NetworkManagerError extends Error {
+	code: string;
+	data: any;
+	message: string;
+
+	constructor(message) {
+		super(message);
+	}
+}
+
 export interface Device {
 	path: string;
 	DeviceType: number;
@@ -127,6 +137,7 @@ export class NetworkManager extends NetworkManagerTypes {
 
 	connectNetwork = async (network) => {
 		try {
+			const netMode = _(NetworkManager.MODE_802_11).filter((mode) => mode === network.mode).value();
 			const connectionParam = [
 				['connection', [
 					['id', ['s', network.ssid]],
@@ -148,7 +159,6 @@ export class NetworkManager extends NetworkManagerTypes {
 					['method', ['s', 'auto']],
 				]],
 			];
-
 			const ap: AccessPoint|any = _.find(this.accessPoints, (props) => {
 				return props.Ssid.toString() === network.ssid;
 			});
@@ -259,8 +269,11 @@ export class NetworkManager extends NetworkManagerTypes {
 	}
 }
 
-function formatError(type: number = 400, message: string, err: any = {}) {
-	return {type, message, err};
+function formatError(code: number = 400, message: string, err: any = {}) {
+	const error = new NetworkManagerError(message);
+	error.data = err;
+	error.code = String(code);
+	return error;
 }
 
 function findConnection(connections, network) {

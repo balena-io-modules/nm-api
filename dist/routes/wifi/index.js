@@ -51,11 +51,11 @@ exports["default"] = {
                         return [4 /*yield*/, nm.connectNetwork(connection)];
                     case 1:
                         _a.sent();
-                        res.status(200).json();
+                        res.status(200).json(connection);
                         return [3 /*break*/, 3];
                     case 2:
                         err_1 = _a.sent();
-                        res.status(err_1.type).json(err_1);
+                        res.status(err_1.code).json(err_1);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/, Bluebird.resolve()];
                 }
@@ -77,7 +77,7 @@ exports["default"] = {
                         return [3 /*break*/, 3];
                     case 2:
                         err_2 = _a.sent();
-                        res.status(err_2.type).json(err_2);
+                        res.status(err_2.code).json(err_2);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/, Bluebird.resolve()];
                 }
@@ -99,7 +99,7 @@ exports["default"] = {
                         return [3 /*break*/, 3];
                     case 2:
                         err_3 = _a.sent();
-                        res.status(err_3.type).json(err_3);
+                        res.status(err_3.code).json(err_3);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/, Bluebird.resolve()];
                 }
@@ -118,11 +118,11 @@ exports["default"] = {
                         return [4 /*yield*/, nm.forgetNetwork(network)];
                     case 1:
                         _a.sent();
-                        res.status(200).json();
+                        res.status(200).json(network);
                         return [3 /*break*/, 3];
                     case 2:
                         err_4 = _a.sent();
-                        return [2 /*return*/, res.status(err_4.type).json(err_4)];
+                        return [2 /*return*/, res.status(err_4.code).json(err_4)];
                     case 3: return [2 /*return*/, Bluebird.resolve()];
                 }
             });
@@ -144,7 +144,7 @@ exports["default"] = {
                         return [3 /*break*/, 3];
                     case 2:
                         err_5 = _a.sent();
-                        res.status(err_5.type).json(err_5);
+                        res.status(err_5.code).json(err_5);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/, Bluebird.resolve()];
                 }
@@ -162,12 +162,12 @@ exports["default"] = {
                         return [4 /*yield*/, nm.getDeviceStatus(nm.devices.wifi)];
                     case 1:
                         State = (_a.sent()).State;
-                        active = State !== nm_1.NetworkManager.DEVICE_STATE.DISCONNECTED;
+                        active = State && (State !== nm_1.NetworkManager.DEVICE_STATE.DISCONNECTED);
                         res.status(200).json({ active: active });
                         return [3 /*break*/, 3];
                     case 2:
                         err_6 = _a.sent();
-                        res.status(err_6.type).json(err_6);
+                        res.status(err_6.code).json(err_6);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/, Bluebird.resolve()];
                 }

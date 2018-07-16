@@ -8,9 +8,9 @@ export default {
 			try {
 				const connection = req.body.value;
 				await nm.connectNetwork(connection);
-				res.status(200).json();
+				res.status(200).json(connection);
 			} catch (err) {
-				res.status(err.type).json(err);
+				res.status(err.code).json(err);
 			}
 			return Bluebird.resolve();
 		},
@@ -22,7 +22,7 @@ export default {
 				const networks = await nm.listNearbyNetworks();
 				res.status(200).json(networks);
 			} catch (err) {
-				res.status(err.type).json(err);
+				res.status(err.code).json(err);
 			}
 			return Bluebird.resolve();
 		},
@@ -34,7 +34,7 @@ export default {
 				const ssid = await nm.getCurrentNetwork();
 				res.status(200).json(ssid);
 			} catch (err) {
-				res.status(err.type).json(err);
+				res.status(err.code).json(err);
 			}
 			return Bluebird.resolve();
 		},
@@ -45,9 +45,9 @@ export default {
 			try {
 				const network = req.body.value;
 				await nm.forgetNetwork(network);
-				res.status(200).json();
+				res.status(200).json(network);
 			} catch (err) {
-				return res.status(err.type).json(err);
+				return res.status(err.code).json(err);
 			}
 			return Bluebird.resolve();
 		},
@@ -60,7 +60,7 @@ export default {
 				const newValue = await nm.toggleWifi(value);
 				res.status(200).json({value: newValue});
 			} catch (err) {
-				res.status(err.type).json(err);
+				res.status(err.code).json(err);
 			}
 			return Bluebird.resolve();
 		},
@@ -70,10 +70,10 @@ export default {
 		handler: async (nm: NetworkManager, req: any, res: any) => {
 			try {
 				const {State} = await nm.getDeviceStatus(nm.devices.wifi);
-				const active = State !== NetworkManager.DEVICE_STATE.DISCONNECTED;
+				const active = State && (State !== NetworkManager.DEVICE_STATE.DISCONNECTED);
 				res.status(200).json({active});
 			} catch (err) {
-				res.status(err.type).json(err);
+				res.status(err.code).json(err);
 			}
 			return Bluebird.resolve();
 		},
