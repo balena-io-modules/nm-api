@@ -13,18 +13,32 @@ $ npm install --save nm-api
 ```
 
 ## Use
-To start `nm-api` as an HTTP server (default port defined internally is `1337`):
+To start `nm-api` as an HTTP server:
 ```javascript
 const nm = require(’nm-api’);
 
-const port = Number(process.env.NM_SERVICE_API_PORT) || 1338;
+const port = Number(process.env.NM_SERVICE_API_PORT);
 
-nm.HttpServer(port)
-.then(() => {
+nm.createHttpServer()
+.then((app) => {
+  app.listen(port);
   console.log(`NetworkManager HTTP APIs running on port ${port}`);
 })
 .catch((err) => {
-  console.error('Something went wrong when starting nm-api', err);
+  console.error('Something went wrong when starting nm-api server', err);
+});
+```
+
+To start `nm-api` as a node module:
+```javascript
+const nm = require(’nm-api’);
+
+nm.init()
+.then((service) => {
+  // do stuff with the instance
+})
+.catch((err) => {
+  console.error('Something went wrong when starting nm-api service', err);
 });
 ```
 

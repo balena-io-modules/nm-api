@@ -172,6 +172,9 @@ var NetworkManager = /** @class */ (function (_super) {
                             return (DeviceType === NetworkManager.DEVICE_TYPE.WIFI);
                         });
                         this.devices.wifi = wifiDevices[0];
+                        if (!wifiDevices[0]) {
+                            throw formatError(404, "Could not find a Wireless Device. Connect one & retry");
+                        }
                         return [2 /*return*/, this.devices.wifi];
                     case 3:
                         err_3 = _a.sent();
@@ -435,7 +438,11 @@ var NetworkManager = /** @class */ (function (_super) {
         return _this;
     }
     NetworkManager.prototype.init = function () {
-        return this.getWifiDevice();
+        var _this = this;
+        return this.getWifiDevice()
+            .then(function () {
+            return _this;
+        });
     };
     NetworkManager.prototype.getBus = function () {
         return systemBus;
@@ -446,6 +453,9 @@ exports.NetworkManager = NetworkManager;
 function formatError(code, message, err) {
     if (code === void 0) { code = 400; }
     if (err === void 0) { err = {}; }
+    if (err.code) {
+        return err;
+    }
     var error = new NetworkManagerError(message);
     error.data = err;
     error.code = String(code);

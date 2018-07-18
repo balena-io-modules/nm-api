@@ -2,7 +2,3 @@
 *.log
 
 node_modules
-
-# resin app files for resin sync
-dist/server.js
-dist/start.sh

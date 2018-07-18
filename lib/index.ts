@@ -26,7 +26,7 @@ interface Route {
 	handler: (nm: NetworkManager) => (req: any, res: any) => void;
 }
 
-async function HttpServer(port: number = 1337) {
+async function createHttpServer() {
 	const app = express();
 	app.use(bodyParser.json());
 	const nm = new NetworkManager();
@@ -34,7 +34,7 @@ async function HttpServer(port: number = 1337) {
 	try {
 		await nm.init();
 		exposeAPIs(app, nm, '/wifi', wifiApi);
-		app.listen(port);
+		return app;
 	} catch (err) {
 		throw err;
 	}
@@ -48,6 +48,6 @@ function exposeAPIs(app, nm: any, rootApi: string = '/', APIs: any) {
 }
 
 export {
-	HttpServer,
+	createHttpServer,
 	NetworkManager
 };

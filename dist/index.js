@@ -56,8 +56,7 @@ var _ = require("lodash");
 var nm_1 = require("./nm");
 exports.NetworkManager = nm_1.NetworkManager;
 var wifi_1 = require("./routes/wifi");
-function HttpServer(port) {
-    if (port === void 0) { port = 1337; }
+function createHttpServer() {
     return __awaiter(this, void 0, void 0, function () {
         var app, nm, err_1;
         return __generator(this, function (_a) {
@@ -73,8 +72,7 @@ function HttpServer(port) {
                 case 2:
                     _a.sent();
                     exposeAPIs(app, nm, '/wifi', wifi_1["default"]);
-                    app.listen(port);
-                    return [3 /*break*/, 4];
+                    return [2 /*return*/, app];
                 case 3:
                     err_1 = _a.sent();
                     throw err_1;
@@ -83,7 +81,7 @@ function HttpServer(port) {
         });
     });
 }
-exports.HttpServer = HttpServer;
+exports.createHttpServer = createHttpServer;
 function exposeAPIs(app, nm, rootApi, APIs) {
     if (rootApi === void 0) { rootApi = '/'; }
     var root = (rootApi === '/') ? '' : rootApi;

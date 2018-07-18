@@ -19,7 +19,6 @@ import * as dbus from 'dbus-native';
 import * as _ from 'lodash';
 import {NetworkManagerTypes} from './types';
 
-
 const systemBus: any = dbus.systemBus();
 const service: string[] = [ 'org', 'freedesktop', 'NetworkManager' ];
 
@@ -62,7 +61,10 @@ export class NetworkManager extends NetworkManagerTypes {
 	}
 
 	init() {
-		return this.getWifiDevice();
+		return this.getWifiDevice()
+		.then(() => {
+			return this;
+		});
 	}
 
 	getBus() {
@@ -113,6 +115,9 @@ export class NetworkManager extends NetworkManagerTypes {
 			const devicesTypes: any[] = await Bluebird.all(getDevicesProperty());
 			const wifiDevices: Device[] = _.filter(devicesTypes, ({DeviceType}) => (DeviceType === NetworkManager.DEVICE_TYPE.WIFI));
 			this.devices.wifi = wifiDevices[0];
+			if (!wifiDevices[0]) {
+				throw formatError(404, `Could not find a Wireless Device. Connect one & retry`);
+			}
 			return this.devices.wifi;
 		} catch (err) {
 			throw formatError(500, `Could not getWifiDevice`, err);
@@ -292,6 +297,9 @@ export class NetworkManager extends NetworkManagerTypes {
 }
 
 function formatError(code: number = 400, message: string, err: any = {}) {
+	if (err.code) {
+		return err;
+	}
 	const error = new NetworkManagerError(message);
 	error.data = err;
 	error.code = String(code);
