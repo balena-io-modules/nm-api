@@ -69,7 +69,7 @@ export default {
 		method: 'GET',
 		handler: async (nm: NetworkManager, req: any, res: any) => {
 			try {
-				const {State} = await nm.getDeviceStatus(nm.devices.wifi);
+				const State = await nm.getDeviceStatus(nm.devices.wifi);
 				const active = State && (State !== NetworkManager.DEVICE_STATE.DISCONNECTED);
 				res.status(200).json({active});
 			} catch (err) {

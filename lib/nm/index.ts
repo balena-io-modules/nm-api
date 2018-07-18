@@ -210,11 +210,17 @@ export class NetworkManager extends NetworkManagerTypes {
 			await this.requestScan(requestScanParams);
 			return this.getAccessPoints(this.devices.wifi.path);
 		} catch (err) {
-			if (_.isArray(err) && (err[0] === 'Scanning not allowed while already scanning' || err[0] === 'Scanning not allowed immediately following previous scan')) {
+			if (_.isArray(err) && this.ignoreScanStatus(err[0])) {
 				return this.getAccessPoints(this.devices.wifi.path);
 			}
 			throw formatError(500, `Could not listNearbyNetworks`, err);
 		}
+	}
+
+	ignoreScanStatus = (status) => {
+		return status === 'Scanning not allowed while already scanning' ||
+			status === 'Scanning not allowed immediately following previous scan' ||
+			status === 'Scanning not allowed while unavailable or activating';
 	}
 
 	getAccessPoints = async (wifiDevicePath) => {
@@ -273,6 +279,7 @@ function formatError(code: number = 400, message: string, err: any = {}) {
 	const error = new NetworkManagerError(message);
 	error.data = err;
 	error.code = String(code);
+	console.error(error);
 	return error;
 }
 

@@ -161,7 +161,7 @@ exports["default"] = {
                         _a.trys.push([0, 2, , 3]);
                         return [4 /*yield*/, nm.getDeviceStatus(nm.devices.wifi)];
                     case 1:
-                        State = (_a.sent()).State;
+                        State = _a.sent();
                         active = State && (State !== nm_1.NetworkManager.DEVICE_STATE.DISCONNECTED);
                         res.status(200).json({ active: active });
                         return [3 /*break*/, 3];

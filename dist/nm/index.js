@@ -317,7 +317,7 @@ var NetworkManager = /** @class */ (function (_super) {
                         return [2 /*return*/, this.getAccessPoints(this.devices.wifi.path)];
                     case 2:
                         err_9 = _a.sent();
-                        if (_.isArray(err_9) && (err_9[0] === 'Scanning not allowed while already scanning' || err_9[0] === 'Scanning not allowed immediately following previous scan')) {
+                        if (_.isArray(err_9) && this.ignoreScanStatus(err_9[0])) {
                             return [2 /*return*/, this.getAccessPoints(this.devices.wifi.path)];
                         }
                         throw formatError(500, "Could not listNearbyNetworks", err_9);
@@ -325,6 +325,11 @@ var NetworkManager = /** @class */ (function (_super) {
                 }
             });
         }); };
+        _this.ignoreScanStatus = function (status) {
+            return status === 'Scanning not allowed while already scanning' ||
+                status === 'Scanning not allowed immediately following previous scan' ||
+                status === 'Scanning not allowed while unavailable or activating';
+        };
         _this.getAccessPoints = function (wifiDevicePath) { return __awaiter(_this, void 0, void 0, function () {
             var AccessPoints, getApsProperties, rawAccessPoints, accessPoints;
             var _this = this;
@@ -429,6 +434,7 @@ function formatError(code, message, err) {
     var error = new NetworkManagerError(message);
     error.data = err;
     error.code = String(code);
+    console.error(error);
     return error;
 }
 function findConnection(connections, network) {
