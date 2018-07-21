@@ -309,6 +309,9 @@ var NetworkManager = /** @class */ (function (_super) {
                     case 1:
                         results = _a.sent();
                         wifiConnection = findConnection(results, network);
+                        if (!wifiConnection) {
+                            throw formatError(404, "Could not find network with SSID " + network.ssid);
+                        }
                         return [4 /*yield*/, this.deleteConnection(wifiConnection.path)];
                     case 2:
                         _a.sent();
@@ -464,9 +467,12 @@ function formatError(code, message, err) {
 }
 function findConnection(connections, network) {
     return _.head(_.filter(connections, function (result) {
-        var connectionProps = getProp(result.settings, 'connection');
-        var _a = getProp(connectionProps, 'id'), type = _a[0], id = _a[1][0];
-        return id === network.ssid;
+        var wifiProps = getProp(result.settings, '802-11-wireless');
+        if (wifiProps) {
+            var _a = getProp(wifiProps, 'ssid'), wifiType = _a[0], ssid = _a[1][0];
+            return ssid.toString() === network.ssid;
+        }
+        return false;
     }));
 }
 function makeNetworksReadable(rawNetworks) {
@@ -536,7 +542,11 @@ function stringToArrayOfBytes(str) {
     }
     return bytes;
 }
-function getProp(s, prop) {
-    var _a = s.find(function (s) { return s[0] === prop; }), key = _a[0], value = _a[1];
-    return value;
+function getProp(settings, prop) {
+    var setting = settings.find(function (setting) { return setting[0] === prop; });
+    if (setting) {
+        var key = setting[0], value = setting[1];
+        return value;
+    }
+    return;
 }

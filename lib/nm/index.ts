@@ -216,6 +216,9 @@ export class NetworkManager extends NetworkManagerTypes {
 		try {
 			const results = await this.listConnections();
 			const wifiConnection = findConnection(results, network);
+			if (!wifiConnection) {
+				throw formatError(404, `Could not find network with SSID "${network.ssid}"`);
+			}
 			await this.deleteConnection(wifiConnection.path);
 			return Bluebird.resolve();
 		} catch (err) {
@@ -309,9 +312,12 @@ function formatError(code: number = 400, message: string, err: any = {}) {
 
 function findConnection(connections, network) {
 	return _.head(_.filter(connections, (result) => {
-		const connectionProps = getProp(result.settings, 'connection');
-		const [type, [id]] = getProp(connectionProps, 'id');
-		return id === network.ssid;
+		const wifiProps = getProp(result.settings, '802-11-wireless');
+		if (wifiProps) {
+			const [wifiType, [ssid]] = getProp(wifiProps, 'ssid');
+			return ssid.toString() === network.ssid;
+		}
+		return false;
 	}));
 }
 
@@ -389,7 +395,11 @@ function stringToArrayOfBytes(str) {
 	return bytes;
 }
 
-function getProp(s, prop) {
-	const [ key, value ] = s.find(s => s[0] === prop);
-	return value;
+function getProp(settings, prop) {
+	const setting = settings.find(setting => setting[0] === prop);
+	if (setting) {
+		const [ key, value ] = setting;
+		return value;
+	}
+	return;
 }
