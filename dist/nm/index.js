@@ -310,7 +310,7 @@ var NetworkManager = /** @class */ (function (_super) {
                         results = _a.sent();
                         wifiConnection = findConnection(results, network);
                         if (!wifiConnection) {
-                            throw formatError(404, "Could not find network with SSID " + network.ssid);
+                            throw formatError(404, "Could not find network with SSID \"" + network.ssid + "\"");
                         }
                         return [4 /*yield*/, this.deleteConnection(wifiConnection.path)];
                     case 2:
@@ -462,7 +462,6 @@ function formatError(code, message, err) {
     var error = new NetworkManagerError(message);
     error.data = err;
     error.code = String(code);
-    console.error(error);
     return error;
 }
 function findConnection(connections, network) {

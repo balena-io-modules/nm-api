@@ -306,7 +306,6 @@ function formatError(code: number = 400, message: string, err: any = {}) {
 	const error = new NetworkManagerError(message);
 	error.data = err;
 	error.code = String(code);
-	console.error(error);
 	return error;
 }
 
