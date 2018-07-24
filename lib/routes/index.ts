@@ -14,12 +14,8 @@
  * limitations under the License.
  */
 
-const assert = require('assert');
-// const nm = require('../dist')
+import wifi from './wifi';
 
-describe('nm-api', () => {
-	specify('run module', (done) => {
-		assert.ok(true);
-		done();
-	});
-});
+export default {
+	wifi,
+};

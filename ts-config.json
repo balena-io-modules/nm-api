@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+		"module": "commonjs",
+		"target": "es5",
+		"lib": ["es5", "es6" ],
+		"noImplicitAny": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"preserveConstEnums": true,
+		"removeComments": true,
+		"sourceMap": true,
+		"strictNullChecks": true,
+		"moduleResolution": "node",
+		"baseUrl": ".",
+		"declaration": true
+	},
+	"include": [
+		"./lib/**/*.ts"
+	]
+}
