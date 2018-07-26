@@ -282,13 +282,17 @@ export class NetworkManager extends NetworkManagerTypes {
 	getCurrentNetwork = async () => {
 		try {
 			const [key, [connections]] = await this.getActiveConnections();
-			const getConnectionsType = () => _.map(connections, _.partial(this.getObjectProperty, ['org.freedesktop.NetworkManager.Connection.Active', 'Type']));
+			const getConnectionProperty = _.partial(this.getObjectProperty, ['org.freedesktop.NetworkManager.Connection.Active', 'Type']);
+			const getConnectionsType = () => _.map(connections, getConnectionProperty);
 			const results = await Bluebird.all(getConnectionsType());
 			const wifiConnection: any = _.filter(results, ({Type}) => Type === '802-11-wireless')[0];
 			if (_.isUndefined(wifiConnection)) {
 				return;
 			}
-			const {Connection} = await this.getObjectProperty(['org.freedesktop.NetworkManager.Connection.Active', 'Connection'], wifiConnection.path);
+			const {Connection} = await this.getObjectProperty([
+				'org.freedesktop.NetworkManager.Connection.Active',
+				'Connection',
+			], wifiConnection.path);
 			const {settings} = await this.getConnectionSettings(Connection);
 			const wifiProps = getProp(settings, '802-11-wireless');
 			const [wifiType, [ssid]] = getProp(wifiProps, 'ssid');

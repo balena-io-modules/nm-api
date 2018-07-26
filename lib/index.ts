@@ -19,8 +19,8 @@ import * as express from 'express';
 import * as _ from 'lodash';
 
 import { NetworkManager } from './nm';
-import { wifi } from './routes';
 import { Route } from './routes/route';
+import wifi from './routes/wifi';
 
 async function createHttpServer() {
 	const app: express.Application = express();

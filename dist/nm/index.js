@@ -398,8 +398,7 @@ var NetworkManager = /** @class */ (function (_super) {
             });
         }); };
         _this.getCurrentNetwork = function () { return __awaiter(_this, void 0, void 0, function () {
-            var _a, key, connections_2, getConnectionsType, results, wifiConnection, Connection, settings, wifiProps, _b, wifiType, ssid, err_11;
-            var _this = this;
+            var _a, key, connections_2, getConnectionProperty_1, getConnectionsType, results, wifiConnection, Connection, settings, wifiProps, _b, wifiType, ssid, err_11;
             return __generator(this, function (_c) {
                 switch (_c.label) {
                     case 0:
@@ -407,7 +406,8 @@ var NetworkManager = /** @class */ (function (_super) {
                         return [4 /*yield*/, this.getActiveConnections()];
                     case 1:
                         _a = _c.sent(), key = _a[0], connections_2 = _a[1][0];
-                        getConnectionsType = function () { return _.map(connections_2, _.partial(_this.getObjectProperty, ['org.freedesktop.NetworkManager.Connection.Active', 'Type'])); };
+                        getConnectionProperty_1 = _.partial(this.getObjectProperty, ['org.freedesktop.NetworkManager.Connection.Active', 'Type']);
+                        getConnectionsType = function () { return _.map(connections_2, getConnectionProperty_1); };
                         return [4 /*yield*/, Bluebird.all(getConnectionsType())];
                     case 2:
                         results = _c.sent();
@@ -418,7 +418,10 @@ var NetworkManager = /** @class */ (function (_super) {
                         if (_.isUndefined(wifiConnection)) {
                             return [2 /*return*/];
                         }
-                        return [4 /*yield*/, this.getObjectProperty(['org.freedesktop.NetworkManager.Connection.Active', 'Connection'], wifiConnection.path)];
+                        return [4 /*yield*/, this.getObjectProperty([
+                                'org.freedesktop.NetworkManager.Connection.Active',
+                                'Connection',
+                            ], wifiConnection.path)];
                     case 3:
                         Connection = (_c.sent()).Connection;
                         return [4 /*yield*/, this.getConnectionSettings(Connection)];
