@@ -52,7 +52,7 @@ nm.init()
 
 POST `/connect-network`
 
-Body:
+Body (JSON):
 
 ```JSON
 {
@@ -165,6 +165,8 @@ HTTP/1.1 500 Internal Server Error
 
 POST `/forget-network`
 
+Body (JSON):
+
 ```JSON
 {
   "value": {
@@ -204,9 +206,11 @@ HTTP/1.1 500 Internal Server Error
 }
 ```
 
-### Toggle WiFi connection
+### Toggle WiFi
 
 POST `/toggle-wifi`
+
+Body (JSON):
 
 ```JSON
 {
