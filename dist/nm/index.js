@@ -398,19 +398,19 @@ var NetworkManager = /** @class */ (function (_super) {
             });
         }); };
         _this.getCurrentNetwork = function () { return __awaiter(_this, void 0, void 0, function () {
-            var _a, key, connections_2, getConnectionsType, results, wifiConnection, Id, err_11;
+            var _a, key, connections_2, getConnectionsType, results, wifiConnection, Connection, settings, wifiProps, _b, wifiType, ssid, err_11;
             var _this = this;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
+            return __generator(this, function (_c) {
+                switch (_c.label) {
                     case 0:
-                        _b.trys.push([0, 4, , 5]);
+                        _c.trys.push([0, 5, , 6]);
                         return [4 /*yield*/, this.getActiveConnections()];
                     case 1:
-                        _a = _b.sent(), key = _a[0], connections_2 = _a[1][0];
+                        _a = _c.sent(), key = _a[0], connections_2 = _a[1][0];
                         getConnectionsType = function () { return _.map(connections_2, _.partial(_this.getObjectProperty, ['org.freedesktop.NetworkManager.Connection.Active', 'Type'])); };
                         return [4 /*yield*/, Bluebird.all(getConnectionsType())];
                     case 2:
-                        results = _b.sent();
+                        results = _c.sent();
                         wifiConnection = _.filter(results, function (_a) {
                             var Type = _a.Type;
                             return Type === '802-11-wireless';
@@ -418,17 +418,22 @@ var NetworkManager = /** @class */ (function (_super) {
                         if (_.isUndefined(wifiConnection)) {
                             return [2 /*return*/];
                         }
-                        return [4 /*yield*/, this.getObjectProperty(['org.freedesktop.NetworkManager.Connection.Active', 'Id'], wifiConnection.path)];
+                        return [4 /*yield*/, this.getObjectProperty(['org.freedesktop.NetworkManager.Connection.Active', 'Connection'], wifiConnection.path)];
                     case 3:
-                        Id = (_b.sent()).Id;
-                        return [2 /*return*/, Id];
+                        Connection = (_c.sent()).Connection;
+                        return [4 /*yield*/, this.getConnectionSettings(Connection)];
                     case 4:
-                        err_11 = _b.sent();
+                        settings = (_c.sent()).settings;
+                        wifiProps = getProp(settings, '802-11-wireless');
+                        _b = getProp(wifiProps, 'ssid'), wifiType = _b[0], ssid = _b[1][0];
+                        return [2 /*return*/, ssid.toString()];
+                    case 5:
+                        err_11 = _c.sent();
                         if (err_11 === 404) {
                             throw formatError(404, 'You\'re not currently connected to a wireless network');
                         }
                         throw formatError(500, "Could not getCurrentNetwork", err_11);
-                    case 5: return [2 /*return*/];
+                    case 6: return [2 /*return*/];
                 }
             });
         }); };

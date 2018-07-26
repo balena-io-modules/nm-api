@@ -18,29 +18,25 @@ import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import * as _ from 'lodash';
 
-import {NetworkManager} from './nm';
-import wifiApi from './routes/wifi';
-
-interface Route {
-	method: string;
-	handler: (nm: NetworkManager) => (req: any, res: any) => void;
-}
+import { NetworkManager } from './nm';
+import { wifi } from './routes';
+import { Route } from './routes/route';
 
 async function createHttpServer() {
-	const app = express();
+	const app: express.Application = express();
 	app.use(bodyParser.json());
 	const nm = new NetworkManager();
 
 	try {
 		await nm.init();
-		exposeAPIs(app, nm, '/wifi', wifiApi);
+		exposeAPIs(app, nm, '/wifi', wifi);
 		return app;
 	} catch (err) {
 		throw err;
 	}
 }
 
-function exposeAPIs(app, nm: any, rootApi: string = '/', APIs: any) {
+function exposeAPIs(app: express.Application, nm: any, rootApi: string = '/', APIs: any) {
 	const root: string = (rootApi === '/') ? '' : rootApi;
 	_.each(APIs, (route: Route, path: string) => {
 		return app[route.method.toLowerCase()](`${root}/${path}`, _.partial(route.handler, nm));

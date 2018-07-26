@@ -55,7 +55,7 @@ var express = require("express");
 var _ = require("lodash");
 var nm_1 = require("./nm");
 exports.NetworkManager = nm_1.NetworkManager;
-var wifi_1 = require("./routes/wifi");
+var routes_1 = require("./routes");
 function createHttpServer() {
     return __awaiter(this, void 0, void 0, function () {
         var app, nm, err_1;
@@ -71,7 +71,7 @@ function createHttpServer() {
                     return [4 /*yield*/, nm.init()];
                 case 2:
                     _a.sent();
-                    exposeAPIs(app, nm, '/wifi', wifi_1["default"]);
+                    exposeAPIs(app, nm, '/wifi', routes_1.wifi);
                     return [2 /*return*/, app];
                 case 3:
                     err_1 = _a.sent();
