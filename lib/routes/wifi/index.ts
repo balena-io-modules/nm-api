@@ -15,7 +15,7 @@
  */
 
 import * as Bluebird from 'bluebird';
-import {NetworkManager} from '../../nm';
+import { NetworkManager } from '../../nm';
 
 export default {
 	'connect-network': {
@@ -48,7 +48,7 @@ export default {
 		handler: async (nm: NetworkManager, req: any, res: any) => {
 			try {
 				const ssid = await nm.getCurrentNetwork();
-				res.status(200).json(ssid);
+				res.status(200).json({ ssid });
 			} catch (err) {
 				res.status(err.code).json(err);
 			}
@@ -74,7 +74,7 @@ export default {
 			try {
 				const value = req.body.value;
 				const newValue = await nm.toggleWifi(value);
-				res.status(200).json({value: newValue});
+				res.status(200).json({ value: newValue });
 			} catch (err) {
 				res.status(err.code).json(err);
 			}
@@ -87,7 +87,7 @@ export default {
 			try {
 				const State = await nm.getDeviceStatus(nm.devices.wifi);
 				const active = State && (State !== NetworkManager.DEVICE_STATE.DISCONNECTED);
-				res.status(200).json({active});
+				res.status(200).json({ active });
 			} catch (err) {
 				res.status(err.code).json(err);
 			}

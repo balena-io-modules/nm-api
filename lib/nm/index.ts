@@ -17,7 +17,7 @@
 import * as Bluebird from 'bluebird';
 import * as dbus from 'dbus-native';
 import * as _ from 'lodash';
-import {NetworkManagerTypes} from './types';
+import { NetworkManagerTypes } from './types';
 
 const systemBus: any = dbus.systemBus();
 const service: string[] = [ 'org', 'freedesktop', 'NetworkManager' ];
@@ -282,14 +282,21 @@ export class NetworkManager extends NetworkManagerTypes {
 	getCurrentNetwork = async () => {
 		try {
 			const [key, [connections]] = await this.getActiveConnections();
-			const getConnectionsType = () => _.map(connections, _.partial(this.getObjectProperty, ['org.freedesktop.NetworkManager.Connection.Active', 'Type']));
+			const getConnectionProperty = _.partial(this.getObjectProperty, ['org.freedesktop.NetworkManager.Connection.Active', 'Type']);
+			const getConnectionsType = () => _.map(connections, getConnectionProperty);
 			const results = await Bluebird.all(getConnectionsType());
 			const wifiConnection: any = _.filter(results, ({Type}) => Type === '802-11-wireless')[0];
 			if (_.isUndefined(wifiConnection)) {
 				return;
 			}
-			const {Id} = await this.getObjectProperty(['org.freedesktop.NetworkManager.Connection.Active', 'Id'], wifiConnection.path);
-			return Id;
+			const {Connection} = await this.getObjectProperty([
+				'org.freedesktop.NetworkManager.Connection.Active',
+				'Connection',
+			], wifiConnection.path);
+			const {settings} = await this.getConnectionSettings(Connection);
+			const wifiProps = getProp(settings, '802-11-wireless');
+			const [wifiType, [ssid]] = getProp(wifiProps, 'ssid');
+			return ssid.toString();
 		} catch (err) {
 			if (err === 404) {
 				throw formatError(404, 'You\'re not currently connected to a wireless network');
