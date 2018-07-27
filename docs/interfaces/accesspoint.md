@@ -23,7 +23,7 @@
 
 **● Ssid**: *`string`*
 
-*Defined in [nm/index.ts:42](https://github.com/resin-io-modules/nm-api/blob/e53f334/lib/nm/index.ts#L42)*
+*Defined in [nm/index.ts:42](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L42)*
 
 ___
 <a id="path"></a>
@@ -32,7 +32,7 @@ ___
 
 **● path**: *`string`*
 
-*Defined in [nm/index.ts:41](https://github.com/resin-io-modules/nm-api/blob/e53f334/lib/nm/index.ts#L41)*
+*Defined in [nm/index.ts:41](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L41)*
 
 ___
 

@@ -54,7 +54,16 @@ HTTP APIs
 
 POST `/connect-network`
 
-Body:
+Headers:
+
+```HTTP
+{
+  "Accept": "application/json",
+  "Content-Type": "application/json"
+}
+```
+
+Body (JSON):
 
 ```JSON
 {
@@ -167,6 +176,17 @@ HTTP/1.1 500 Internal Server Error
 
 POST `/forget-network`
 
+Headers:
+
+```HTTP
+{
+  "Accept": "application/json",
+  "Content-Type": "application/json"
+}
+```
+
+Body (JSON):
+
 ```JSON
 {
   "value": {
@@ -206,9 +226,20 @@ HTTP/1.1 500 Internal Server Error
 }
 ```
 
-### Toggle WiFi connection
+### Toggle WiFi
 
 POST `/toggle-wifi`
+
+Headers:
+
+```HTTP
+{
+  "Accept": "application/json",
+  "Content-Type": "application/json"
+}
+```
+
+Body (JSON):
 
 ```JSON
 {
@@ -310,7 +341,7 @@ HTTP/1.1 500 Internal Server Error
 
 **● service**: *`string`[]* =  [ 'org', 'freedesktop', 'NetworkManager' ]
 
-*Defined in [nm/index.ts:23](https://github.com/resin-io-modules/nm-api/blob/e53f334/lib/nm/index.ts#L23)*
+*Defined in [nm/index.ts:23](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L23)*
 
 ___
 <a id="systembus"></a>
@@ -319,7 +350,7 @@ ___
 
 **● systemBus**: *`any`* =  dbus.systemBus()
 
-*Defined in [nm/index.ts:22](https://github.com/resin-io-modules/nm-api/blob/e53f334/lib/nm/index.ts#L22)*
+*Defined in [nm/index.ts:22](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L22)*
 
 ___
 
@@ -331,7 +362,7 @@ ___
 
 ▸ **checkSecurityProps**(nmSecurityTypes: *`any`*): `(Anonymous function)`
 
-*Defined in [nm/index.ts:377](https://github.com/resin-io-modules/nm-api/blob/e53f334/lib/nm/index.ts#L377)*
+*Defined in [nm/index.ts:381](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L381)*
 
 **Parameters:**
 
@@ -348,7 +379,7 @@ ___
 
 ▸ **createHttpServer**(): `Promise`<`Application`>
 
-*Defined in [index.ts:25](https://github.com/resin-io-modules/nm-api/blob/e53f334/lib/index.ts#L25)*
+*Defined in [index.ts:25](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/index.ts#L25)*
 
 **Returns:** `Promise`<`Application`>
 
@@ -359,7 +390,7 @@ ___
 
 ▸ **exposeAPIs**(app: *`express.Application`*, nm: *`any`*, rootApi?: *`string`*, APIs: *`any`*): `void`
 
-*Defined in [index.ts:39](https://github.com/resin-io-modules/nm-api/blob/e53f334/lib/index.ts#L39)*
+*Defined in [index.ts:39](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/index.ts#L39)*
 
 **Parameters:**
 
@@ -379,7 +410,7 @@ ___
 
 ▸ **findConnection**(connections: *`any`*, network: *`any`*): `any`
 
-*Defined in [nm/index.ts:315](https://github.com/resin-io-modules/nm-api/blob/e53f334/lib/nm/index.ts#L315)*
+*Defined in [nm/index.ts:319](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L319)*
 
 **Parameters:**
 
@@ -397,7 +428,7 @@ ___
 
 ▸ **formatError**(code?: *`number`*, message: *`string`*, err?: *`any`*): `any`
 
-*Defined in [nm/index.ts:305](https://github.com/resin-io-modules/nm-api/blob/e53f334/lib/nm/index.ts#L305)*
+*Defined in [nm/index.ts:309](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L309)*
 
 **Parameters:**
 
@@ -416,7 +447,7 @@ ___
 
 ▸ **getProp**(settings: *`any`*, prop: *`any`*): `any`
 
-*Defined in [nm/index.ts:400](https://github.com/resin-io-modules/nm-api/blob/e53f334/lib/nm/index.ts#L400)*
+*Defined in [nm/index.ts:404](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L404)*
 
 **Parameters:**
 
@@ -434,7 +465,7 @@ ___
 
 ▸ **makeNetworksReadable**(rawNetworks: *`any`*): `any`[]
 
-*Defined in [nm/index.ts:326](https://github.com/resin-io-modules/nm-api/blob/e53f334/lib/nm/index.ts#L326)*
+*Defined in [nm/index.ts:330](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L330)*
 
 **Parameters:**
 
@@ -451,7 +482,7 @@ ___
 
 ▸ **stringToArrayOfBytes**(str: *`any`*): `any`[]
 
-*Defined in [nm/index.ts:392](https://github.com/resin-io-modules/nm-api/blob/e53f334/lib/nm/index.ts#L392)*
+*Defined in [nm/index.ts:396](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L396)*
 
 **Parameters:**
 
