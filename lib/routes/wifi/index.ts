@@ -17,9 +17,11 @@
 import * as Bluebird from 'bluebird';
 import { NetworkManager } from '../../nm';
 
-export default {
+const routes = {
 	/**
 	 * Connect to a network by ssid/passphrase
+	 *
+	 * @param {Object} value Object containing ssid (string) and passphrase (string) props
 	 */
 	'connect-network': {
 		method: 'POST',
@@ -66,6 +68,8 @@ export default {
 	},
 	/**
 	 * Forget a network by ssid
+	 *
+	 * @param {Object} value * @param {Object} value Object containing the ssid prop (string)
 	 */
 	'forget-network': {
 		method: 'POST',
@@ -82,6 +86,8 @@ export default {
 	},
 	/**
 	 * Toggle the WiFi Device
+	 *
+	 * @param {boolean} value boolean
 	 */
 	'toggle-wifi': {
 		method: 'POST',
@@ -113,3 +119,5 @@ export default {
 		},
 	},
 };
+
+export default routes;

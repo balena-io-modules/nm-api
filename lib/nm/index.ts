@@ -93,7 +93,7 @@ export class NetworkManager extends NetworkManagerTypes {
 	 *
 	 * Activation is currently made by connecting to the first known wireless network
 	 *
-	 * @param {boolean} value
+	 * @param value
 	 */
 	toggleWifi = async (value: boolean) => {
 		try {
@@ -110,7 +110,11 @@ export class NetworkManager extends NetworkManagerTypes {
 	}
 
 	/**
-	 * Call a DBUS NetworkManager object's interface method
+	 * Curried function used to call a DBUS NetworkManager object's interface method
+	 * @param path Object path
+	 * @param iface Object interface
+	 * @param method Array of 2 params: 1. The method (string) 2. The method's signature (string)
+	 * @param params Method params
 	 */
 	callMethod = (path: string[]|string = []) => (iface: string[]|string = []) => ([method, signature]: [string, string]) => (params: any[] = []): Bluebird<any> => {
 		return Bluebird.fromCallback((callback) => {
@@ -126,8 +130,11 @@ export class NetworkManager extends NetworkManagerTypes {
 		});
 	}
 
+
 	/**
 	 * Get an object's property
+	 * @param params Array of 2 params: 1. Object's interface 2. Object's property
+	 * @param path Object path
 	 */
 	getObjectProperty = async ([iface, prop]: [string, string], path) => {
 		try {
@@ -159,6 +166,8 @@ export class NetworkManager extends NetworkManagerTypes {
 
 	/**
 	 * Get a network Device status
+	 *
+	 * @param device The Device to get status of
 	 */
 	getDeviceStatus = async (device: Device) => {
 		try {
@@ -171,31 +180,43 @@ export class NetworkManager extends NetworkManagerTypes {
 
 	/**
 	 * Activate a network Device with the first available connection
+	 *
+	 * @param path Device Object path
 	 */
 	connectDevice = (path) => this.callMethod()()(['ActivateConnection', 'ooo'])(['/', path, '/']);
 
 	/**
 	 * Disconnect a network Device
+	 *
+	 * @param path Device Object path
 	 */
 	disconnectDevice = (path) => this.callMethod(path)('org.freedesktop.NetworkManager.Device')(['Disconnect', ''])();
 
 	/**
 	 * Activate a given Connection
+	 *
+	 * @param params DBUS NetworkManager method ActivateConnection params array
 	 */
 	activateConnection = (params: any) => this.callMethod()()(['ActivateConnection', 'ooo'])(params);
 
 	/**
 	 * Add a new Connectionn
+	 *
+	 * @param params DBUS NetworkManager Settings method AddConnection params array
 	 */
 	addConnection = (params: any) => this.callMethod(['Settings'])(['Settings'])(['AddConnection', 'a{sa{sv}}'])([params]);
 
 	/**
 	 * Delete a Connection
+	 *
+	 * @param path Settings Connection Object path
 	 */
 	deleteConnection = (path) => this.callMethod(path)(['Settings', 'Connection'])(['Delete', ''])();
 
 	/**
 	 * Request a scan on nearby AccessPoint on the current Wireless Device
+	 *
+	 * @param params DBUS NetworkManager Device Wireless method RequestScan params array
 	 */
 	requestScan = (params) => this.callMethod(this.devices.wifi.path)('org.freedesktop.NetworkManager.Device.Wireless')(['RequestScan', 'a{sv}'])([params]);
 
@@ -206,6 +227,8 @@ export class NetworkManager extends NetworkManagerTypes {
 
 	/**
 	 * Get a Connection's Settings
+	 *
+	 * @param path Settings Connection Object path
 	 */
 	getConnectionSettings = async (path) => {
 		try {
@@ -218,6 +241,8 @@ export class NetworkManager extends NetworkManagerTypes {
 
 	/**
 	 * Connect to a network with SSID/Passphrase
+	 *
+	 * @param network Object with 'ssid', 'passphrase' and (for now) optional 'mode' properties
 	 */
 	connectNetwork = async (network) => {
 		try {
@@ -280,6 +305,8 @@ export class NetworkManager extends NetworkManagerTypes {
 
 	/**
 	 * Forget a registered network with SSID
+	 *
+	 * @param network Object with 'ssid' property
 	 */
 	forgetNetwork = async (network) => {
 		try {
@@ -315,6 +342,8 @@ export class NetworkManager extends NetworkManagerTypes {
 
 	/**
 	 * Safety check on common errors when using RequestScan repeatedly, which isn't allowed before 3 seconds from the last scan or when a Wireless Device isn't active
+	 *
+	 * @param status Error message received from RequestScan
 	 */
 	ignoreScanStatus = (status) => {
 		return status === 'Scanning not allowed while already scanning' ||
@@ -324,6 +353,8 @@ export class NetworkManager extends NetworkManagerTypes {
 
 	/**
 	 * Get the AccessPoints found by a Wireless Device
+	 *
+	 * @param wifiDevicePath Wireless Device Object path
 	 */
 	getAccessPoints = async (wifiDevicePath) => {
 		const {AccessPoints} = await this.getObjectProperty(['org.freedesktop.NetworkManager.Device.Wireless', 'AccessPoints'], wifiDevicePath);
@@ -344,6 +375,8 @@ export class NetworkManager extends NetworkManagerTypes {
 
 	/**
 	 * Get the basic AccessPoint's properties needed to present it to a GUI
+	 *
+	 * @param path AccessPoint Object path
 	 */
 	getApProperties = async (path) => {
 		try {
@@ -408,6 +441,9 @@ function formatError(code: number = 400, message: string, err: any = {}) {
 
 /**
  * Find a network in a list of Connection Settings
+ *
+ * @param connections Array of Connection Settings
+ * @param network Object with 'ssid' property
  */
 function findConnection(connections, network) {
 	return _.head(_.filter(connections, (result) => {

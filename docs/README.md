@@ -331,6 +331,10 @@ HTTP/1.1 500 Internal Server Error
 * [makeNetworksReadable](#makenetworksreadable)
 * [stringToArrayOfBytes](#stringtoarrayofbytes)
 
+### Object literals
+
+* [routes](#routes)
+
 ---
 
 ## Variables
@@ -341,7 +345,7 @@ HTTP/1.1 500 Internal Server Error
 
 **● service**: *`string`[]* =  [ 'org', 'freedesktop', 'NetworkManager' ]
 
-*Defined in [nm/index.ts:23](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L23)*
+*Defined in [nm/index.ts:23](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/nm/index.ts#L23)*
 
 ___
 <a id="systembus"></a>
@@ -350,7 +354,7 @@ ___
 
 **● systemBus**: *`any`* =  dbus.systemBus()
 
-*Defined in [nm/index.ts:22](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L22)*
+*Defined in [nm/index.ts:22](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/nm/index.ts#L22)*
 
 ___
 
@@ -362,7 +366,7 @@ ___
 
 ▸ **checkSecurityProps**(nmSecurityTypes: *`any`*): `(Anonymous function)`
 
-*Defined in [nm/index.ts:482](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L482)*
+*Defined in [nm/index.ts:518](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/nm/index.ts#L518)*
 
 **Parameters:**
 
@@ -379,7 +383,7 @@ ___
 
 ▸ **createHttpServer**(): `Promise`<`Application`>
 
-*Defined in [index.ts:25](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/index.ts#L25)*
+*Defined in [index.ts:25](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/index.ts#L25)*
 
 **Returns:** `Promise`<`Application`>
 
@@ -390,7 +394,7 @@ ___
 
 ▸ **exposeAPIs**(app: *`express.Application`*, nm: *`any`*, rootApi?: *`string`*, APIs: *`any`*): `void`
 
-*Defined in [index.ts:39](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/index.ts#L39)*
+*Defined in [index.ts:39](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/index.ts#L39)*
 
 **Parameters:**
 
@@ -410,16 +414,16 @@ ___
 
 ▸ **findConnection**(connections: *`any`*, network: *`any`*): `any`
 
-*Defined in [nm/index.ts:412](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L412)*
+*Defined in [nm/index.ts:448](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/nm/index.ts#L448)*
 
 Find a network in a list of Connection Settings
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
-| connections | `any` |
-| network | `any` |
+| Param | Type | Description |
+| ------ | ------ | ------ |
+| connections | `any` |  Array of Connection Settings |
+| network | `any` |  Object with 'ssid' property |
 
 **Returns:** `any`
 
@@ -430,7 +434,7 @@ ___
 
 ▸ **formatError**(code?: *`number`*, message: *`string`*, err?: *`any`*): `any`
 
-*Defined in [nm/index.ts:399](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L399)*
+*Defined in [nm/index.ts:432](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/nm/index.ts#L432)*
 
 Format an error to be used by exception handlers
 
@@ -451,7 +455,7 @@ ___
 
 ▸ **getProp**(settings: *`any`*, prop: *`any`*): `any`
 
-*Defined in [nm/index.ts:513](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L513)*
+*Defined in [nm/index.ts:549](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/nm/index.ts#L549)*
 
 Helper function to find a Connection Settings' property
 
@@ -471,7 +475,7 @@ ___
 
 ▸ **makeNetworksReadable**(rawNetworks: *`any`*): `any`[]
 
-*Defined in [nm/index.ts:427](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L427)*
+*Defined in [nm/index.ts:463](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/nm/index.ts#L463)*
 
 Format AccessPoints to be presented on a GUI
 
@@ -490,7 +494,7 @@ ___
 
 ▸ **stringToArrayOfBytes**(str: *`any`*): `any`[]
 
-*Defined in [nm/index.ts:500](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L500)*
+*Defined in [nm/index.ts:536](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/nm/index.ts#L536)*
 
 Helper function to convert a string to an array of bytes
 
@@ -501,6 +505,262 @@ Helper function to convert a string to an array of bytes
 | str | `any` |
 
 **Returns:** `any`[]
+
+___
+
+## Object literals
+
+<a id="routes"></a>
+
+### `<Const>` routes
+
+**routes**: *`object`*
+
+*Defined in [routes/wifi/index.ts:20](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L20)*
+
+<a id="routes.connect_network"></a>
+
+####  connect-network
+
+**connect-network**: *`object`*
+
+*Defined in [routes/wifi/index.ts:26](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L26)*
+
+Connect to a network by ssid/passphrase
+*__param__*: Object containing ssid (string) and passphrase (string) props
+
+<a id="routes.connect_network.method"></a>
+
+####  method
+
+**● method**: *`string`* = "POST"
+
+*Defined in [routes/wifi/index.ts:27](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L27)*
+
+___
+<a id="routes.connect_network.handler"></a>
+
+####  handler
+
+▸ **handler**(nm: *[NetworkManager](classes/networkmanager.md)*, req: *`any`*, res: *`any`*): `Promise`<`void`>
+
+*Defined in [routes/wifi/index.ts:28](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L28)*
+
+**Parameters:**
+
+| Param | Type |
+| ------ | ------ |
+| nm | [NetworkManager](classes/networkmanager.md) |
+| req | `any` |
+| res | `any` |
+
+**Returns:** `Promise`<`void`>
+
+___
+
+___
+<a id="routes.current_network"></a>
+
+####  current-network
+
+**current-network**: *`object`*
+
+*Defined in [routes/wifi/index.ts:57](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L57)*
+
+Get the currently active wireless network ssid
+
+<a id="routes.current_network.method-1"></a>
+
+####  method
+
+**● method**: *`string`* = "GET"
+
+*Defined in [routes/wifi/index.ts:58](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L58)*
+
+___
+<a id="routes.current_network.handler-1"></a>
+
+####  handler
+
+▸ **handler**(nm: *[NetworkManager](classes/networkmanager.md)*, req: *`any`*, res: *`any`*): `Promise`<`void`>
+
+*Defined in [routes/wifi/index.ts:59](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L59)*
+
+**Parameters:**
+
+| Param | Type |
+| ------ | ------ |
+| nm | [NetworkManager](classes/networkmanager.md) |
+| req | `any` |
+| res | `any` |
+
+**Returns:** `Promise`<`void`>
+
+___
+
+___
+<a id="routes.forget_network"></a>
+
+####  forget-network
+
+**forget-network**: *`object`*
+
+*Defined in [routes/wifi/index.ts:74](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L74)*
+
+Forget a network by ssid
+*__param__*: *   @param {Object} value Object containing the ssid prop (string)
+
+<a id="routes.forget_network.method-2"></a>
+
+####  method
+
+**● method**: *`string`* = "POST"
+
+*Defined in [routes/wifi/index.ts:75](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L75)*
+
+___
+<a id="routes.forget_network.handler-2"></a>
+
+####  handler
+
+▸ **handler**(nm: *[NetworkManager](classes/networkmanager.md)*, req: *`any`*, res: *`any`*): `Promise`<`any`>
+
+*Defined in [routes/wifi/index.ts:76](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L76)*
+
+**Parameters:**
+
+| Param | Type |
+| ------ | ------ |
+| nm | [NetworkManager](classes/networkmanager.md) |
+| req | `any` |
+| res | `any` |
+
+**Returns:** `Promise`<`any`>
+
+___
+
+___
+<a id="routes.get_wifi_active"></a>
+
+####  get-wifi-active
+
+**get-wifi-active**: *`object`*
+
+*Defined in [routes/wifi/index.ts:108](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L108)*
+
+Get the state of the WiFi Device (active: true/false)
+
+<a id="routes.get_wifi_active.method-3"></a>
+
+####  method
+
+**● method**: *`string`* = "GET"
+
+*Defined in [routes/wifi/index.ts:109](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L109)*
+
+___
+<a id="routes.get_wifi_active.handler-3"></a>
+
+####  handler
+
+▸ **handler**(nm: *[NetworkManager](classes/networkmanager.md)*, req: *`any`*, res: *`any`*): `Promise`<`void`>
+
+*Defined in [routes/wifi/index.ts:110](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L110)*
+
+**Parameters:**
+
+| Param | Type |
+| ------ | ------ |
+| nm | [NetworkManager](classes/networkmanager.md) |
+| req | `any` |
+| res | `any` |
+
+**Returns:** `Promise`<`void`>
+
+___
+
+___
+<a id="routes.list_nearby_networks"></a>
+
+####  list-nearby-networks
+
+**list-nearby-networks**: *`object`*
+
+*Defined in [routes/wifi/index.ts:42](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L42)*
+
+List all nearby networks
+
+<a id="routes.list_nearby_networks.method-4"></a>
+
+####  method
+
+**● method**: *`string`* = "GET"
+
+*Defined in [routes/wifi/index.ts:43](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L43)*
+
+___
+<a id="routes.list_nearby_networks.handler-4"></a>
+
+####  handler
+
+▸ **handler**(nm: *[NetworkManager](classes/networkmanager.md)*, req: *`any`*, res: *`any`*): `Promise`<`void`>
+
+*Defined in [routes/wifi/index.ts:44](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L44)*
+
+**Parameters:**
+
+| Param | Type |
+| ------ | ------ |
+| nm | [NetworkManager](classes/networkmanager.md) |
+| req | `any` |
+| res | `any` |
+
+**Returns:** `Promise`<`void`>
+
+___
+
+___
+<a id="routes.toggle_wifi"></a>
+
+####  toggle-wifi
+
+**toggle-wifi**: *`object`*
+
+*Defined in [routes/wifi/index.ts:92](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L92)*
+
+Toggle the WiFi Device
+*__param__*: boolean
+
+<a id="routes.toggle_wifi.method-5"></a>
+
+####  method
+
+**● method**: *`string`* = "POST"
+
+*Defined in [routes/wifi/index.ts:93](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L93)*
+
+___
+<a id="routes.toggle_wifi.handler-5"></a>
+
+####  handler
+
+▸ **handler**(nm: *[NetworkManager](classes/networkmanager.md)*, req: *`any`*, res: *`any`*): `Promise`<`void`>
+
+*Defined in [routes/wifi/index.ts:94](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/routes/wifi/index.ts#L94)*
+
+**Parameters:**
+
+| Param | Type |
+| ------ | ------ |
+| nm | [NetworkManager](classes/networkmanager.md) |
+| req | `any` |
+| res | `any` |
+
+**Returns:** `Promise`<`void`>
+
+___
+
+___
 
 ___
 

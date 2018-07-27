@@ -23,7 +23,7 @@
 
 **● DeviceType**: *`number`*
 
-*Defined in [nm/index.ts:37](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L37)*
+*Defined in [nm/index.ts:37](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/nm/index.ts#L37)*
 
 ___
 <a id="path"></a>
@@ -32,7 +32,7 @@ ___
 
 **● path**: *`string`*
 
-*Defined in [nm/index.ts:36](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L36)*
+*Defined in [nm/index.ts:36](https://github.com/resin-io-modules/nm-api/blob/e38e336/lib/nm/index.ts#L36)*
 
 ___
 
