@@ -43,8 +43,19 @@ export interface AccessPoint {
 }
 
 export class NetworkManager extends NetworkManagerTypes {
+	/**
+	 * List of all current found nearby AccessPoints
+	 */
 	accessPoints: any[];
+
+	/**
+	 * Flag to identify wether the WiFi is enabled/disabled
+	 */
 	wifiActive: boolean;
+
+	/**
+	 * Registered Devices
+	 */
 	devices: {
 		wifi: Device;
 	};
@@ -60,6 +71,9 @@ export class NetworkManager extends NetworkManagerTypes {
 		};
 	}
 
+	/**
+	 * Get the first WiFi Device available then return this service instance
+	 */
 	init() {
 		return this.getWifiDevice()
 		.then(() => {
@@ -67,11 +81,21 @@ export class NetworkManager extends NetworkManagerTypes {
 		});
 	}
 
+	/**
+	 * Return the connection to DBUS system bus
+	 */
 	getBus() {
 		return systemBus;
 	}
 
-	toggleWifi = async (value) => {
+	/**
+	 * Toggle WiFi device on/off
+	 *
+	 * Activation is currently made by connecting to the first known wireless network
+	 *
+	 * @param value
+	 */
+	toggleWifi = async (value: boolean) => {
 		try {
 			let success = false;
 			if (value) {
@@ -85,6 +109,13 @@ export class NetworkManager extends NetworkManagerTypes {
 		}
 	}
 
+	/**
+	 * Curried function used to call a DBUS NetworkManager object's interface method
+	 * @param path Object path
+	 * @param iface Object interface
+	 * @param method Array of 2 params: 1. The method (string) 2. The method's signature (string)
+	 * @param params Method params
+	 */
 	callMethod = (path: string[]|string = []) => (iface: string[]|string = []) => ([method, signature]: [string, string]) => (params: any[] = []): Bluebird<any> => {
 		return Bluebird.fromCallback((callback) => {
 			const command = {
@@ -99,6 +130,12 @@ export class NetworkManager extends NetworkManagerTypes {
 		});
 	}
 
+
+	/**
+	 * Get an object's property
+	 * @param params Array of 2 params: 1. Object's interface 2. Object's property
+	 * @param path Object path
+	 */
 	getObjectProperty = async ([iface, prop]: [string, string], path) => {
 		try {
 			const [key, [value]] = await this.callMethod(path)('org.freedesktop.DBus.Properties')(['Get', 'ss'])([iface, prop]);
@@ -108,6 +145,9 @@ export class NetworkManager extends NetworkManagerTypes {
 		}
 	}
 
+	/**
+	 * Get the first WiFi Device available
+	 */
 	getWifiDevice = async () => {
 		try {
 			const devices = await this.callMethod()()(['GetDevices', ''])();
@@ -124,6 +164,11 @@ export class NetworkManager extends NetworkManagerTypes {
 		}
 	}
 
+	/**
+	 * Get a network Device status
+	 *
+	 * @param device The Device to get status of
+	 */
 	getDeviceStatus = async (device: Device) => {
 		try {
 			const {State} = await _.partial(this.getObjectProperty, ['org.freedesktop.NetworkManager.Device', 'State'])(device.path);
@@ -133,20 +178,58 @@ export class NetworkManager extends NetworkManagerTypes {
 		}
 	}
 
+	/**
+	 * Activate a network Device with the first available connection
+	 *
+	 * @param path Device Object path
+	 */
 	connectDevice = (path) => this.callMethod()()(['ActivateConnection', 'ooo'])(['/', path, '/']);
 
+	/**
+	 * Disconnect a network Device
+	 *
+	 * @param path Device Object path
+	 */
 	disconnectDevice = (path) => this.callMethod(path)('org.freedesktop.NetworkManager.Device')(['Disconnect', ''])();
 
+	/**
+	 * Activate a given Connection
+	 *
+	 * @param params DBUS NetworkManager method ActivateConnection params array
+	 */
 	activateConnection = (params: any) => this.callMethod()()(['ActivateConnection', 'ooo'])(params);
 
+	/**
+	 * Add a new Connectionn
+	 *
+	 * @param params DBUS NetworkManager Settings method AddConnection params array
+	 */
 	addConnection = (params: any) => this.callMethod(['Settings'])(['Settings'])(['AddConnection', 'a{sa{sv}}'])([params]);
 
+	/**
+	 * Delete a Connection
+	 *
+	 * @param path Settings Connection Object path
+	 */
 	deleteConnection = (path) => this.callMethod(path)(['Settings', 'Connection'])(['Delete', ''])();
 
+	/**
+	 * Request a scan on nearby AccessPoint on the current Wireless Device
+	 *
+	 * @param params DBUS NetworkManager Device Wireless method RequestScan params array
+	 */
 	requestScan = (params) => this.callMethod(this.devices.wifi.path)('org.freedesktop.NetworkManager.Device.Wireless')(['RequestScan', 'a{sv}'])([params]);
 
+	/**
+	 * Get the currently active network connections
+	 */
 	getActiveConnections = () => this.callMethod()('org.freedesktop.DBus.Properties')(['Get', 'ss'])(['org.freedesktop.NetworkManager', 'ActiveConnections']);
 
+	/**
+	 * Get a Connection's Settings
+	 *
+	 * @param path Settings Connection Object path
+	 */
 	getConnectionSettings = async (path) => {
 		try {
 			const value = await this.callMethod(path)(['Settings', 'Connection'])(['GetSettings', ''])();
@@ -156,6 +239,11 @@ export class NetworkManager extends NetworkManagerTypes {
 		}
 	};
 
+	/**
+	 * Connect to a network with SSID/Passphrase
+	 *
+	 * @param network Object with 'ssid', 'passphrase' and (for now) optional 'mode' properties
+	 */
 	connectNetwork = async (network) => {
 		try {
 			const netMode = _(NetworkManager.MODE_802_11).filter((mode) => mode === network.mode).value();
@@ -201,6 +289,9 @@ export class NetworkManager extends NetworkManagerTypes {
 		}
 	}
 
+	/**
+	 * List all currently registered Connections
+	 */
 	listConnections = async () => {
 		try {
 			const connections = await this.callMethod(['Settings'])(['Settings'])(['ListConnections', ''])();
@@ -212,6 +303,11 @@ export class NetworkManager extends NetworkManagerTypes {
 		}
 	}
 
+	/**
+	 * Forget a registered network with SSID
+	 *
+	 * @param network Object with 'ssid' property
+	 */
 	forgetNetwork = async (network) => {
 		try {
 			const results = await this.listConnections();
@@ -226,6 +322,9 @@ export class NetworkManager extends NetworkManagerTypes {
 		}
 	}
 
+	/**
+	 * List all neaby networks
+	 */
 	listNearbyNetworks = async () => {
 		try {
 			const requestScanParams = [
@@ -241,12 +340,22 @@ export class NetworkManager extends NetworkManagerTypes {
 		}
 	}
 
+	/**
+	 * Safety check on common errors when using RequestScan repeatedly, which isn't allowed before 3 seconds from the last scan or when a Wireless Device isn't active
+	 *
+	 * @param status Error message received from RequestScan
+	 */
 	ignoreScanStatus = (status) => {
 		return status === 'Scanning not allowed while already scanning' ||
 			status === 'Scanning not allowed immediately following previous scan' ||
 			status === 'Scanning not allowed while unavailable or activating';
 	}
 
+	/**
+	 * Get the AccessPoints found by a Wireless Device
+	 *
+	 * @param wifiDevicePath Wireless Device Object path
+	 */
 	getAccessPoints = async (wifiDevicePath) => {
 		const {AccessPoints} = await this.getObjectProperty(['org.freedesktop.NetworkManager.Device.Wireless', 'AccessPoints'], wifiDevicePath);
 		const getApsProperties = () => _.map(AccessPoints, this.getApProperties);
@@ -264,6 +373,11 @@ export class NetworkManager extends NetworkManagerTypes {
 		return makeNetworksReadable(this.accessPoints);
 	}
 
+	/**
+	 * Get the basic AccessPoint's properties needed to present it to a GUI
+	 *
+	 * @param path AccessPoint Object path
+	 */
 	getApProperties = async (path) => {
 		try {
 			const props = await Bluebird.all([
@@ -279,6 +393,9 @@ export class NetworkManager extends NetworkManagerTypes {
 		}
 	}
 
+	/**
+	 * Get the currently active Wireless Connection
+	 */
 	getCurrentNetwork = async () => {
 		try {
 			const [key, [connections]] = await this.getActiveConnections();
@@ -306,6 +423,12 @@ export class NetworkManager extends NetworkManagerTypes {
 	}
 }
 
+/**
+ * Format an error to be used by exception handlers
+ * @param code HTTP Code
+ * @param message Error message
+ * @param err Error data
+ */
 function formatError(code: number = 400, message: string, err: any = {}) {
 	if (err.code) {
 		return err;
@@ -316,6 +439,12 @@ function formatError(code: number = 400, message: string, err: any = {}) {
 	return error;
 }
 
+/**
+ * Find a network in a list of Connection Settings
+ *
+ * @param connections Array of Connection Settings
+ * @param network Object with 'ssid' property
+ */
 function findConnection(connections, network) {
 	return _.head(_.filter(connections, (result) => {
 		const wifiProps = getProp(result.settings, '802-11-wireless');
@@ -327,6 +456,10 @@ function findConnection(connections, network) {
 	}));
 }
 
+/**
+ * Format AccessPoints to be presented on a GUI
+ * @param rawNetworks Networks data obtained by getAccessPoints
+ */
 function makeNetworksReadable(rawNetworks) {
 	return _.map(rawNetworks, (rawNetwork) => {
 		const network: any = _.reduce(rawNetwork, (acc, val, key) => {
@@ -378,6 +511,10 @@ function makeNetworksReadable(rawNetworks) {
 	});
 }
 
+/**
+ *
+ * @param nmSecurityTypes DBUS NetworkManager security props to be checked against (can be NM80211ApFlags or NM80211ApSecurityFlags)
+ */
 function checkSecurityProps(nmSecurityTypes) {
 	return (prop) => {
 		const bitFlagVal = _.reverse((prop).toString(2).split(''));
@@ -393,6 +530,9 @@ function checkSecurityProps(nmSecurityTypes) {
 	};
 }
 
+/**
+ * Helper function to convert a string to an array of bytes
+ */
 function stringToArrayOfBytes(str) {
 	const bytes = [];
 	for (let i = 0; i < str.length; ++i) {
@@ -401,6 +541,11 @@ function stringToArrayOfBytes(str) {
 	return bytes;
 }
 
+/**
+ * Helper function to find a Connection Settings' property
+ * @param settings Settings object
+ * @param prop Property to find
+ */
 function getProp(settings, prop) {
 	const setting = settings.find(setting => setting[0] === prop);
 	if (setting) {
