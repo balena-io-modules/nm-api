@@ -110,7 +110,7 @@ exports["default"] = {
                         return [4 /*yield*/, nm.getCurrentNetwork()];
                     case 1:
                         ssid = _a.sent();
-                        res.status(200).json(ssid);
+                        res.status(200).json({ ssid: ssid });
                         return [3 /*break*/, 3];
                     case 2:
                         err_3 = _a.sent();

@@ -1,3 +1,4 @@
+"use strict";
 /*
  * Copyright 2018 resin.io
  *
@@ -13,9 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-import wifi from './wifi';
-
-export default {
-	wifi,
-};
+exports.__esModule = true;
+var wifi_1 = require("./wifi");
+exports.wifi = wifi_1["default"];
