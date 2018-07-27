@@ -34,7 +34,7 @@
 
 ⊕ **new NetworkManagerError**(message: *`any`*): [NetworkManagerError](networkmanagererror.md)
 
-*Defined in [nm/index.ts:28](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L28)*
+*Defined in [nm/index.ts:28](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L28)*
 
 **Parameters:**
 
@@ -54,7 +54,7 @@ ___
 
 **● code**: *`string`*
 
-*Defined in [nm/index.ts:26](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L26)*
+*Defined in [nm/index.ts:26](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L26)*
 
 ___
 <a id="data"></a>
@@ -63,7 +63,7 @@ ___
 
 **● data**: *`any`*
 
-*Defined in [nm/index.ts:27](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L27)*
+*Defined in [nm/index.ts:27](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L27)*
 
 ___
 <a id="message"></a>
@@ -72,7 +72,7 @@ ___
 
 **● message**: *`string`*
 
-*Defined in [nm/index.ts:28](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L28)*
+*Defined in [nm/index.ts:28](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L28)*
 
 ___
 <a id="error"></a>

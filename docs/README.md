@@ -341,7 +341,7 @@ HTTP/1.1 500 Internal Server Error
 
 **● service**: *`string`[]* =  [ 'org', 'freedesktop', 'NetworkManager' ]
 
-*Defined in [nm/index.ts:23](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L23)*
+*Defined in [nm/index.ts:23](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L23)*
 
 ___
 <a id="systembus"></a>
@@ -350,7 +350,7 @@ ___
 
 **● systemBus**: *`any`* =  dbus.systemBus()
 
-*Defined in [nm/index.ts:22](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L22)*
+*Defined in [nm/index.ts:22](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L22)*
 
 ___
 
@@ -362,13 +362,13 @@ ___
 
 ▸ **checkSecurityProps**(nmSecurityTypes: *`any`*): `(Anonymous function)`
 
-*Defined in [nm/index.ts:381](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L381)*
+*Defined in [nm/index.ts:482](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L482)*
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
-| nmSecurityTypes | `any` |
+| Param | Type | Description |
+| ------ | ------ | ------ |
+| nmSecurityTypes | `any` |  DBUS NetworkManager security props to be checked against (can be NM80211ApFlags or NM80211ApSecurityFlags) |
 
 **Returns:** `(Anonymous function)`
 
@@ -379,7 +379,7 @@ ___
 
 ▸ **createHttpServer**(): `Promise`<`Application`>
 
-*Defined in [index.ts:25](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/index.ts#L25)*
+*Defined in [index.ts:25](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/index.ts#L25)*
 
 **Returns:** `Promise`<`Application`>
 
@@ -390,7 +390,7 @@ ___
 
 ▸ **exposeAPIs**(app: *`express.Application`*, nm: *`any`*, rootApi?: *`string`*, APIs: *`any`*): `void`
 
-*Defined in [index.ts:39](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/index.ts#L39)*
+*Defined in [index.ts:39](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/index.ts#L39)*
 
 **Parameters:**
 
@@ -410,7 +410,9 @@ ___
 
 ▸ **findConnection**(connections: *`any`*, network: *`any`*): `any`
 
-*Defined in [nm/index.ts:319](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L319)*
+*Defined in [nm/index.ts:412](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L412)*
+
+Find a network in a list of Connection Settings
 
 **Parameters:**
 
@@ -428,15 +430,17 @@ ___
 
 ▸ **formatError**(code?: *`number`*, message: *`string`*, err?: *`any`*): `any`
 
-*Defined in [nm/index.ts:309](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L309)*
+*Defined in [nm/index.ts:399](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L399)*
+
+Format an error to be used by exception handlers
 
 **Parameters:**
 
-| Param | Type | Default value |
-| ------ | ------ | ------ |
-| `Default value` code | `number` | 400 |
-| message | `string` | - |
-| `Default value` err | `any` |  {} |
+| Param | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `Default value` code | `number` | 400 |  HTTP Code |
+| message | `string` | - |  Error message |
+| `Default value` err | `any` |  {} |  Error data |
 
 **Returns:** `any`
 
@@ -447,14 +451,16 @@ ___
 
 ▸ **getProp**(settings: *`any`*, prop: *`any`*): `any`
 
-*Defined in [nm/index.ts:404](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L404)*
+*Defined in [nm/index.ts:513](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L513)*
+
+Helper function to find a Connection Settings' property
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
-| settings | `any` |
-| prop | `any` |
+| Param | Type | Description |
+| ------ | ------ | ------ |
+| settings | `any` |  Settings object |
+| prop | `any` |  Property to find |
 
 **Returns:** `any`
 
@@ -465,13 +471,15 @@ ___
 
 ▸ **makeNetworksReadable**(rawNetworks: *`any`*): `any`[]
 
-*Defined in [nm/index.ts:330](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L330)*
+*Defined in [nm/index.ts:427](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L427)*
+
+Format AccessPoints to be presented on a GUI
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
-| rawNetworks | `any` |
+| Param | Type | Description |
+| ------ | ------ | ------ |
+| rawNetworks | `any` |  Networks data obtained by getAccessPoints |
 
 **Returns:** `any`[]
 
@@ -482,7 +490,9 @@ ___
 
 ▸ **stringToArrayOfBytes**(str: *`any`*): `any`[]
 
-*Defined in [nm/index.ts:396](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/index.ts#L396)*
+*Defined in [nm/index.ts:500](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/index.ts#L500)*
+
+Helper function to convert a string to an array of bytes
 
 **Parameters:**
 

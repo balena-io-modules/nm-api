@@ -18,6 +18,9 @@ import * as Bluebird from 'bluebird';
 import { NetworkManager } from '../../nm';
 
 export default {
+	/**
+	 * Connect to a network by ssid/passphrase
+	 */
 	'connect-network': {
 		method: 'POST',
 		handler: async (nm: NetworkManager, req: any, res: any) => {
@@ -31,6 +34,9 @@ export default {
 			return Bluebird.resolve();
 		},
 	},
+	/**
+	 * List all nearby networks
+	 */
 	'list-nearby-networks': {
 		method: 'GET',
 		handler: async (nm: NetworkManager, req: any, res: any) => {
@@ -43,6 +49,9 @@ export default {
 			return Bluebird.resolve();
 		},
 	},
+	/**
+	 * Get the currently active wireless network ssid
+	 */
 	'current-network': {
 		method: 'GET',
 		handler: async (nm: NetworkManager, req: any, res: any) => {
@@ -55,6 +64,9 @@ export default {
 			return Bluebird.resolve();
 		},
 	},
+	/**
+	 * Forget a network by ssid
+	 */
 	'forget-network': {
 		method: 'POST',
 		handler: async (nm: NetworkManager, req: any, res: any) => {
@@ -68,6 +80,9 @@ export default {
 			return Bluebird.resolve();
 		},
 	},
+	/**
+	 * Toggle the WiFi Device
+	 */
 	'toggle-wifi': {
 		method: 'POST',
 		handler: async (nm: NetworkManager, req: any, res: any) => {
@@ -81,6 +96,9 @@ export default {
 			return Bluebird.resolve();
 		},
 	},
+	/**
+	 * Get the state of the WiFi Device (active: true/false)
+	 */
 	'get-wifi-active': {
 		method: 'GET',
 		handler: async (nm: NetworkManager, req: any, res: any) => {

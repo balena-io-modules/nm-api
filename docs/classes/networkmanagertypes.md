@@ -47,7 +47,7 @@
 
 **ACTIVATION_STATE**: *`object`*
 
-*Defined in [nm/types/index.ts:840](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L840)*
+*Defined in [nm/types/index.ts:840](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L840)*
 
 NMActivationStateFlags Since: v1.10
 *__enum__*: {Number}
@@ -58,7 +58,7 @@ NMActivationStateFlags Since: v1.10
 
 **● IP4_READY**: *`null`* =  null
 
-*Defined in [nm/types/index.ts:865](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L865)*
+*Defined in [nm/types/index.ts:865](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L865)*
 
 IPv4 setting is completed.
 *__type__*: {Number}
@@ -70,7 +70,7 @@ ___
 
 **● IP6_READY**: *`null`* =  null
 
-*Defined in [nm/types/index.ts:870](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L870)*
+*Defined in [nm/types/index.ts:870](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L870)*
 
 IPv6 setting is completed.
 *__type__*: {Number}
@@ -82,7 +82,7 @@ ___
 
 **● IS_MASTER**: *`null`* =  null
 
-*Defined in [nm/types/index.ts:850](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L850)*
+*Defined in [nm/types/index.ts:850](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L850)*
 
 The device is a master.
 *__type__*: {Number}
@@ -94,7 +94,7 @@ ___
 
 **● IS_SLAVE**: *`null`* =  null
 
-*Defined in [nm/types/index.ts:855](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L855)*
+*Defined in [nm/types/index.ts:855](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L855)*
 
 The device is a slave.
 *__type__*: {Number}
@@ -106,7 +106,7 @@ ___
 
 **● LAYER2_READY**: *`null`* =  null
 
-*Defined in [nm/types/index.ts:860](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L860)*
+*Defined in [nm/types/index.ts:860](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L860)*
 
 Layer2 is activated and ready.
 *__type__*: {Number}
@@ -118,7 +118,7 @@ ___
 
 **● MASTER_HAS_SLAVES**: *`null`* =  null
 
-*Defined in [nm/types/index.ts:876](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L876)*
+*Defined in [nm/types/index.ts:876](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L876)*
 
 The master has any slave devices attached. This only makes sense if the device is a master.
 *__type__*: {Number}
@@ -130,7 +130,7 @@ ___
 
 **● NONE**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:845](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L845)*
+*Defined in [nm/types/index.ts:845](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L845)*
 
 An alias for numeric zero, no flags set.
 *__type__*: {Number}
@@ -144,7 +144,7 @@ ___
 
 **ACTIVE_CONNECTION_STATE**: *`object`*
 
-*Defined in [nm/types/index.ts:595](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L595)*
+*Defined in [nm/types/index.ts:595](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L595)*
 
 NMActiveConnectionState NOTE: NMActiveConnectionState values indicate the state of a connection to a specific network while it is starting, connected, or disconnecting from that network.
 *__enum__*: {Number}
@@ -155,7 +155,7 @@ NMActiveConnectionState NOTE: NMActiveConnectionState values indicate the state 
 
 **● ACTIVATED**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:601](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L601)*
+*Defined in [nm/types/index.ts:601](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L601)*
 
 There is a connection to the network
 
@@ -166,7 +166,7 @@ ___
 
 **● ACTIVATING**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:599](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L599)*
+*Defined in [nm/types/index.ts:599](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L599)*
 
 A network connection is being prepared
 
@@ -177,7 +177,7 @@ ___
 
 **● DEACTIVATED**: *`number`* = 4
 
-*Defined in [nm/types/index.ts:605](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L605)*
+*Defined in [nm/types/index.ts:605](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L605)*
 
 The network connection is disconnected and will be removed
 
@@ -188,7 +188,7 @@ ___
 
 **● DEACTIVATING**: *`number`* = 3
 
-*Defined in [nm/types/index.ts:603](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L603)*
+*Defined in [nm/types/index.ts:603](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L603)*
 
 The network connection is being torn down and cleaned up
 
@@ -199,7 +199,7 @@ ___
 
 **● UNKNOWN**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:597](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L597)*
+*Defined in [nm/types/index.ts:597](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L597)*
 
 The state of the connection is unknown
 
@@ -212,7 +212,7 @@ ___
 
 **ACTIVE_CONNECTION_STATE_REASON**: *`object`*
 
-*Defined in [nm/types/index.ts:613](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L613)*
+*Defined in [nm/types/index.ts:613](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L613)*
 
 NMActiveConnectionStateReason Since: v1.8
 *__enum__*: {Number}
@@ -223,7 +223,7 @@ NMActiveConnectionStateReason Since: v1.8
 
 **● CONNECTION_REMOVED**: *`number`* = 11
 
-*Defined in [nm/types/index.ts:673](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L673)*
+*Defined in [nm/types/index.ts:673](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L673)*
 
 The connection was deleted from settings.
 *__type__*: {Number}
@@ -235,7 +235,7 @@ ___
 
 **● CONNECT_TIMEOUT**: *`number`* = 6
 
-*Defined in [nm/types/index.ts:648](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L648)*
+*Defined in [nm/types/index.ts:648](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L648)*
 
 The connection attempt to the VPN service timed out.
 *__type__*: {Number}
@@ -247,7 +247,7 @@ ___
 
 **● DEPENDENCY_FAILED**: *`number`* = 12
 
-*Defined in [nm/types/index.ts:678](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L678)*
+*Defined in [nm/types/index.ts:678](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L678)*
 
 Master connection of this connection failed to activate.
 *__type__*: {Number}
@@ -259,7 +259,7 @@ ___
 
 **● DEVICE_DISCONNECTED**: *`number`* = 3
 
-*Defined in [nm/types/index.ts:633](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L633)*
+*Defined in [nm/types/index.ts:633](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L633)*
 
 The active connection changed state because the device it was using was disconnected.
 *__type__*: {Number}
@@ -271,7 +271,7 @@ ___
 
 **● DEVICE_REALIZE_FAILED**: *`number`* = 13
 
-*Defined in [nm/types/index.ts:683](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L683)*
+*Defined in [nm/types/index.ts:683](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L683)*
 
 Could not create the software device link.
 *__type__*: {Number}
@@ -283,7 +283,7 @@ ___
 
 **● DEVICE_REMOVED**: *`number`* = 14
 
-*Defined in [nm/types/index.ts:688](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L688)*
+*Defined in [nm/types/index.ts:688](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L688)*
 
 The device this connection depended on disappeared.
 *__type__*: {Number}
@@ -295,7 +295,7 @@ ___
 
 **● IP_CONFIG_INVALID**: *`number`* = 5
 
-*Defined in [nm/types/index.ts:643](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L643)*
+*Defined in [nm/types/index.ts:643](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L643)*
 
 The IP config of the active connection was invalid.
 *__type__*: {Number}
@@ -307,7 +307,7 @@ ___
 
 **● LOGIN_FAILED**: *`number`* = 10
 
-*Defined in [nm/types/index.ts:668](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L668)*
+*Defined in [nm/types/index.ts:668](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L668)*
 
 Authentication to the server failed.
 *__type__*: {Number}
@@ -319,7 +319,7 @@ ___
 
 **● NONE**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:623](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L623)*
+*Defined in [nm/types/index.ts:623](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L623)*
 
 No reason was given for the active connection state change.
 *__type__*: {Number}
@@ -331,7 +331,7 @@ ___
 
 **● NO_SECRETS**: *`number`* = 9
 
-*Defined in [nm/types/index.ts:663](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L663)*
+*Defined in [nm/types/index.ts:663](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L663)*
 
 Necessary secrets for the connection were not provided.
 *__type__*: {Number}
@@ -343,7 +343,7 @@ ___
 
 **● SERVICE_START_FAILED**: *`number`* = 8
 
-*Defined in [nm/types/index.ts:658](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L658)*
+*Defined in [nm/types/index.ts:658](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L658)*
 
 Starting the service providing the VPN connection failed.
 *__type__*: {Number}
@@ -355,7 +355,7 @@ ___
 
 **● SERVICE_START_TIMEOUT**: *`number`* = 7
 
-*Defined in [nm/types/index.ts:653](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L653)*
+*Defined in [nm/types/index.ts:653](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L653)*
 
 A timeout occurred while starting the service providing the VPN connection.
 *__type__*: {Number}
@@ -367,7 +367,7 @@ ___
 
 **● SERVICE_STOPPED**: *`number`* = 4
 
-*Defined in [nm/types/index.ts:638](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L638)*
+*Defined in [nm/types/index.ts:638](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L638)*
 
 The service providing the VPN connection was stopped.
 *__type__*: {Number}
@@ -379,7 +379,7 @@ ___
 
 **● UNKNOWN**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:618](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L618)*
+*Defined in [nm/types/index.ts:618](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L618)*
 
 The reason for the active connection state change is unknown.
 *__type__*: {Number}
@@ -391,7 +391,7 @@ ___
 
 **● USER_DISCONNECTED**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:628](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L628)*
+*Defined in [nm/types/index.ts:628](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L628)*
 
 The active connection changed state because the user disconnected it.
 *__type__*: {Number}
@@ -405,7 +405,7 @@ ___
 
 **AP_802_11S**: *`object`*
 
-*Defined in [nm/types/index.ts:222](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L222)*
+*Defined in [nm/types/index.ts:222](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L222)*
 
 NM80211ApFlags
 *__enum__*: {Number}
@@ -416,7 +416,7 @@ NM80211ApFlags
 
 **● NONE**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:224](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L224)*
+*Defined in [nm/types/index.ts:224](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L224)*
 
 Access point has no special capabilities
 
@@ -427,7 +427,7 @@ ___
 
 **● PRIVACY**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:226](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L226)*
+*Defined in [nm/types/index.ts:226](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L226)*
 
 Access point requires authentication and encryption (usually means WEP)
 
@@ -438,7 +438,7 @@ ___
 
 **● WPS**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:228](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L228)*
+*Defined in [nm/types/index.ts:228](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L228)*
 
 Access point supports some WPS method
 
@@ -449,7 +449,7 @@ ___
 
 **● WPS_PBC**: *`number`* = 4
 
-*Defined in [nm/types/index.ts:230](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L230)*
+*Defined in [nm/types/index.ts:230](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L230)*
 
 Access point supports push-button WPS
 
@@ -460,7 +460,7 @@ ___
 
 **● WPS_PIN**: *`number`* = 8
 
-*Defined in [nm/types/index.ts:232](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L232)*
+*Defined in [nm/types/index.ts:232](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L232)*
 
 Access point supports PIN-based WPS
 
@@ -473,7 +473,7 @@ ___
 
 **AP_802_11_SEC**: *`object`*
 
-*Defined in [nm/types/index.ts:241](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L241)*
+*Defined in [nm/types/index.ts:241](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L241)*
 
 NM80211ApSecurityFlags
 *__enum__*: {Number}
@@ -486,7 +486,7 @@ NM80211ApSecurityFlags
 
 **● GROUP_CCMP**: *`number`* = 128
 
-*Defined in [nm/types/index.ts:259](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L259)*
+*Defined in [nm/types/index.ts:259](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L259)*
 
 AES/CCMP is supported for group/broadcast encryption
 
@@ -497,7 +497,7 @@ ___
 
 **● GROUP_TKIP**: *`number`* = 64
 
-*Defined in [nm/types/index.ts:257](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L257)*
+*Defined in [nm/types/index.ts:257](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L257)*
 
 TKIP is supported for group/broadcast encryption
 
@@ -508,7 +508,7 @@ ___
 
 **● GROUP_WEP104**: *`number`* = 32
 
-*Defined in [nm/types/index.ts:255](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L255)*
+*Defined in [nm/types/index.ts:255](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L255)*
 
 104/128-bit WEP is supported for group/broadcast encryption
 
@@ -519,7 +519,7 @@ ___
 
 **● GROUP_WEP40**: *`number`* = 16
 
-*Defined in [nm/types/index.ts:253](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L253)*
+*Defined in [nm/types/index.ts:253](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L253)*
 
 40/64-bit WEP is supported for group/broadcast encryption
 
@@ -530,7 +530,7 @@ ___
 
 **● KEY_MGMT_802_1X**: *`number`* = 512
 
-*Defined in [nm/types/index.ts:263](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L263)*
+*Defined in [nm/types/index.ts:263](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L263)*
 
 802.1x authentication and key management is supported
 
@@ -541,7 +541,7 @@ ___
 
 **● KEY_MGMT_PSK**: *`number`* = 256
 
-*Defined in [nm/types/index.ts:261](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L261)*
+*Defined in [nm/types/index.ts:261](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L261)*
 
 WPA/RSN Pre-Shared Key encryption is supported
 
@@ -552,7 +552,7 @@ ___
 
 **● NONE**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:243](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L243)*
+*Defined in [nm/types/index.ts:243](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L243)*
 
 The access point has no special security requirements
 
@@ -563,7 +563,7 @@ ___
 
 **● PAIR_CCMP**: *`number`* = 8
 
-*Defined in [nm/types/index.ts:251](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L251)*
+*Defined in [nm/types/index.ts:251](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L251)*
 
 AES/CCMP is supported for pairwise/unicast encryption
 
@@ -574,7 +574,7 @@ ___
 
 **● PAIR_TKIP**: *`number`* = 4
 
-*Defined in [nm/types/index.ts:249](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L249)*
+*Defined in [nm/types/index.ts:249](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L249)*
 
 TKIP is supported for pairwise/unicast encryption
 
@@ -585,7 +585,7 @@ ___
 
 **● PAIR_WEP104**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:247](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L247)*
+*Defined in [nm/types/index.ts:247](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L247)*
 
 104/128-bit WEP is supported for pairwise/unicast encryption
 
@@ -596,7 +596,7 @@ ___
 
 **● PAIR_WEP40**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:245](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L245)*
+*Defined in [nm/types/index.ts:245](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L245)*
 
 40/64-bit WEP is supported for pairwise/unicast encryption
 
@@ -609,7 +609,7 @@ ___
 
 **BT_CAPABILITY**: *`object`*
 
-*Defined in [nm/types/index.ts:300](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L300)*
+*Defined in [nm/types/index.ts:300](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L300)*
 
 NMBluetoothCapabilities
 *__enum__*: {Number}
@@ -622,7 +622,7 @@ NMBluetoothCapabilities
 
 **● DUN**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:304](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L304)*
+*Defined in [nm/types/index.ts:304](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L304)*
 
 Device provides Dial-Up Networking capability
 
@@ -633,7 +633,7 @@ ___
 
 **● NAP**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:306](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L306)*
+*Defined in [nm/types/index.ts:306](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L306)*
 
 Device provides Network Access Point capability
 
@@ -644,7 +644,7 @@ ___
 
 **● NONE**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:302](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L302)*
+*Defined in [nm/types/index.ts:302](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L302)*
 
 Device has no usable capabilities
 
@@ -657,7 +657,7 @@ ___
 
 **CAPABILITY**: *`object`*
 
-*Defined in [nm/types/index.ts:25](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L25)*
+*Defined in [nm/types/index.ts:25](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L25)*
 
 NMCapability NOTE: The range 0x7000 - 0x7FFF of capabilities is guaranteed not to be used by upstream NetworkManager. It could thus be used for downstream extensions.
 *__enum__*: {Number}
@@ -668,7 +668,7 @@ NMCapability NOTE: The range 0x7000 - 0x7FFF of capabilities is guaranteed not t
 
 **● TEAM**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:27](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L27)*
+*Defined in [nm/types/index.ts:27](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L27)*
 
 ___
 
@@ -679,7 +679,7 @@ ___
 
 **CHECKPOINT_CREATE**: *`object`*
 
-*Defined in [nm/types/index.ts:793](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L793)*
+*Defined in [nm/types/index.ts:793](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L793)*
 
 NMCheckpointCreateFlags Since: v1.4
 *__enum__*: {Number}
@@ -690,7 +690,7 @@ NMCheckpointCreateFlags Since: v1.4
 
 **● DELETE_NEW_CONNECTIONS**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:810](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L810)*
+*Defined in [nm/types/index.ts:810](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L810)*
 
 Upon rollback, delete any new connection added after the checkpoint Since: v1.6
 *__type__*: {Number}
@@ -702,7 +702,7 @@ ___
 
 **● DESTROY_ALL**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:804](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L804)*
+*Defined in [nm/types/index.ts:804](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L804)*
 
 When creating a new checkpoint, destroy all existing ones.
 *__type__*: {Number}
@@ -714,7 +714,7 @@ ___
 
 **● DISCONNECT_NEW_DEVICES**: *`number`* = 4
 
-*Defined in [nm/types/index.ts:816](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L816)*
+*Defined in [nm/types/index.ts:816](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L816)*
 
 Upon rollback, disconnect any new device appeared after the checkpoint Since: v1.6
 *__type__*: {Number}
@@ -726,7 +726,7 @@ ___
 
 **● NONE**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:798](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L798)*
+*Defined in [nm/types/index.ts:798](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L798)*
 
 No flags
 *__type__*: {Number}
@@ -740,7 +740,7 @@ ___
 
 **CONNECTIVITY**: *`object`*
 
-*Defined in [nm/types/index.ts:79](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L79)*
+*Defined in [nm/types/index.ts:79](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L79)*
 
 NMConnectivityState
 *__enum__*: {Number}
@@ -751,7 +751,7 @@ NMConnectivityState
 
 **● FULL**: *`number`* = 4
 
-*Defined in [nm/types/index.ts:103](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L103)*
+*Defined in [nm/types/index.ts:103](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L103)*
 
 Host is connected to a network, and able to reach the full Internet
 
@@ -762,7 +762,7 @@ ___
 
 **● LIMITED**: *`number`* = 3
 
-*Defined in [nm/types/index.ts:98](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L98)*
+*Defined in [nm/types/index.ts:98](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L98)*
 
 Host is connected to a network, not able to reach the full Internet, but a captive portal has not been detected
 
@@ -773,7 +773,7 @@ ___
 
 **● NONE**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:88](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L88)*
+*Defined in [nm/types/index.ts:88](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L88)*
 
 Host is not connected to any network
 
@@ -784,7 +784,7 @@ ___
 
 **● PORTAL**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:92](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L92)*
+*Defined in [nm/types/index.ts:92](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L92)*
 
 Internet connection is hijacked by a captive portal gateway
 
@@ -795,7 +795,7 @@ ___
 
 **● UNKNOWN**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:84](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L84)*
+*Defined in [nm/types/index.ts:84](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L84)*
 
 Network connectivity is unknown; Connectivity checks disabled, or not run yet
 
@@ -808,7 +808,7 @@ ___
 
 **DEVICE_CAP**: *`object`*
 
-*Defined in [nm/types/index.ts:174](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L174)*
+*Defined in [nm/types/index.ts:174](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L174)*
 
 NMDeviceCapabilities
 *__enum__*: {Number}
@@ -819,7 +819,7 @@ NMDeviceCapabilities
 
 **● CARRIER_DETECT**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:180](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L180)*
+*Defined in [nm/types/index.ts:180](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L180)*
 
 This device can indicate carrier status
 
@@ -830,7 +830,7 @@ ___
 
 **● IS_SOFTWARE**: *`number`* = 3
 
-*Defined in [nm/types/index.ts:182](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L182)*
+*Defined in [nm/types/index.ts:182](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L182)*
 
 This device is a software device
 
@@ -841,7 +841,7 @@ ___
 
 **● NM_SUPPORTED**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:178](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L178)*
+*Defined in [nm/types/index.ts:178](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L178)*
 
 NetworkManager supports this device
 
@@ -852,7 +852,7 @@ ___
 
 **● NONE**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:176](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L176)*
+*Defined in [nm/types/index.ts:176](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L176)*
 
 Device has no special capabilities
 
@@ -863,7 +863,7 @@ ___
 
 **● SRIOV**: *`number`* = 4
 
-*Defined in [nm/types/index.ts:184](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L184)*
+*Defined in [nm/types/index.ts:184](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L184)*
 
 This device supports single-root I/O virtualization
 
@@ -876,7 +876,7 @@ ___
 
 **DEVICE_MODEM_CAPABILITY**: *`object`*
 
-*Defined in [nm/types/index.ts:316](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L316)*
+*Defined in [nm/types/index.ts:316](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L316)*
 
 NMDeviceModemCapabilities
 *__enum__*: {Number}
@@ -889,7 +889,7 @@ NMDeviceModemCapabilities
 
 **● CDMA_EVDO**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:322](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L322)*
+*Defined in [nm/types/index.ts:322](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L322)*
 
 Modem supports at least one of CDMA 1xRTT, EVDO revision 0, EVDO revision A, or EVDO revision B
 
@@ -900,7 +900,7 @@ ___
 
 **● GSM_UMTS**: *`number`* = 4
 
-*Defined in [nm/types/index.ts:324](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L324)*
+*Defined in [nm/types/index.ts:324](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L324)*
 
 Modem supports at least one of GSM, GPRS, EDGE, UMTS, HSDPA, HSUPA, or HSPA+ packet switched data capability
 
@@ -911,7 +911,7 @@ ___
 
 **● LTE**: *`number`* = 8
 
-*Defined in [nm/types/index.ts:326](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L326)*
+*Defined in [nm/types/index.ts:326](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L326)*
 
 Modem has LTE data capability
 
@@ -922,7 +922,7 @@ ___
 
 **● NONE**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:318](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L318)*
+*Defined in [nm/types/index.ts:318](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L318)*
 
 Modem has no usable capabilities
 
@@ -933,7 +933,7 @@ ___
 
 **● POTS**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:320](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L320)*
+*Defined in [nm/types/index.ts:320](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L320)*
 
 Modem uses the analog wired telephone network and is not a wireless/cellular device
 
@@ -946,7 +946,7 @@ ___
 
 **DEVICE_STATE**: *`object`*
 
-*Defined in [nm/types/index.ts:348](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L348)*
+*Defined in [nm/types/index.ts:348](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L348)*
 
 NMDeviceState
 *__enum__*: {Number}
@@ -957,7 +957,7 @@ NMDeviceState
 
 **● ACTIVATED**: *`number`* = 100
 
-*Defined in [nm/types/index.ts:415](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L415)*
+*Defined in [nm/types/index.ts:415](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L415)*
 
 The device has a network connection, either local or global.
 *__type__*: {Number}
@@ -969,7 +969,7 @@ ___
 
 **● CONFIG**: *`number`* = 50
 
-*Defined in [nm/types/index.ts:385](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L385)*
+*Defined in [nm/types/index.ts:385](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L385)*
 
 The device is connecting to the requested network. This may include operations like associating with the WiFi AP, dialing the modem, connecting to the remote Bluetooth device, etc.
 *__type__*: {Number}
@@ -981,7 +981,7 @@ ___
 
 **● DEACTIVATING**: *`number`* = 110
 
-*Defined in [nm/types/index.ts:422](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L422)*
+*Defined in [nm/types/index.ts:422](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L422)*
 
 A disconnection from the current network connection was requested, and the device is cleaning up resources used for that connection. The network connection may still be valid.
 *__type__*: {Number}
@@ -993,7 +993,7 @@ ___
 
 **● DISCONNECTED**: *`number`* = 30
 
-*Defined in [nm/types/index.ts:370](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L370)*
+*Defined in [nm/types/index.ts:370](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L370)*
 
 The device can be activated, but is currently idle and not connected to a network.
 *__type__*: {Number}
@@ -1005,7 +1005,7 @@ ___
 
 **● FAILED**: *`number`* = 120
 
-*Defined in [nm/types/index.ts:428](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L428)*
+*Defined in [nm/types/index.ts:428](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L428)*
 
 The device failed to connect to the requested network and is cleaning up the connection request
 *__type__*: {Number}
@@ -1017,7 +1017,7 @@ ___
 
 **● IP_CHECK**: *`number`* = 80
 
-*Defined in [nm/types/index.ts:404](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L404)*
+*Defined in [nm/types/index.ts:404](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L404)*
 
 The device is checking whether further action is required for the requested network connection. This may include checking whether only local network access is available, whether a captive portal is blocking access to the Internet, etc.
 *__type__*: {Number}
@@ -1029,7 +1029,7 @@ ___
 
 **● IP_CONFIG**: *`number`* = 70
 
-*Defined in [nm/types/index.ts:397](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L397)*
+*Defined in [nm/types/index.ts:397](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L397)*
 
 The device is requesting IPv4 and/or IPv6 addresses and routing information from the network.
 *__type__*: {Number}
@@ -1041,7 +1041,7 @@ ___
 
 **● NEED_AUTH**: *`number`* = 60
 
-*Defined in [nm/types/index.ts:391](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L391)*
+*Defined in [nm/types/index.ts:391](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L391)*
 
 The device requires more information to continue connecting to the requested network. This includes secrets like WiFi passphrases, login passwords, PIN codes, etc.
 *__type__*: {Number}
@@ -1053,7 +1053,7 @@ ___
 
 **● PREPARE**: *`number`* = 40
 
-*Defined in [nm/types/index.ts:378](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L378)*
+*Defined in [nm/types/index.ts:378](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L378)*
 
 The device is preparing the connection to the network. This may include operations like changing the MAC address, setting physical link properties, and anything else required to connect to the requested network.
 *__type__*: {Number}
@@ -1065,7 +1065,7 @@ ___
 
 **● SECONDARIES**: *`number`* = 90
 
-*Defined in [nm/types/index.ts:410](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L410)*
+*Defined in [nm/types/index.ts:410](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L410)*
 
 The device is waiting for a secondary connection (like a VPN) which must activated before the device can be activated
 *__type__*: {Number}
@@ -1077,7 +1077,7 @@ ___
 
 **● UNAVAILABLE**: *`number`* = 20
 
-*Defined in [nm/types/index.ts:365](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L365)*
+*Defined in [nm/types/index.ts:365](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L365)*
 
 The device is managed by NetworkManager, but is not available for use. Reasons may include the wireless switched off, missing firmware, no ethernet carrier, missing supplicant or modem manager, etc.
 *__type__*: {Number}
@@ -1089,7 +1089,7 @@ ___
 
 **● UNKNOWN**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:353](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L353)*
+*Defined in [nm/types/index.ts:353](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L353)*
 
 The device's state is unknown
 *__type__*: {Number}
@@ -1101,7 +1101,7 @@ ___
 
 **● UNMANAGED**: *`number`* = 10
 
-*Defined in [nm/types/index.ts:358](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L358)*
+*Defined in [nm/types/index.ts:358](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L358)*
 
 The device is recognized, but not managed by NetworkManager
 *__type__*: {Number}
@@ -1115,7 +1115,7 @@ ___
 
 **DEVICE_STATE_REASON**: *`object`*
 
-*Defined in [nm/types/index.ts:435](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L435)*
+*Defined in [nm/types/index.ts:435](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L435)*
 
 NMDeviceStateReason
 *__enum__*: {Number}
@@ -1126,7 +1126,7 @@ NMDeviceStateReason
 
 **● AUTOIP_ERROR**: *`number`* = 21
 
-*Defined in [nm/types/index.ts:479](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L479)*
+*Defined in [nm/types/index.ts:479](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L479)*
 
 AutoIP service error
 
@@ -1137,7 +1137,7 @@ ___
 
 **● AUTOIP_FAILED**: *`number`* = 22
 
-*Defined in [nm/types/index.ts:481](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L481)*
+*Defined in [nm/types/index.ts:481](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L481)*
 
 AutoIP service failed
 
@@ -1148,7 +1148,7 @@ ___
 
 **● AUTOIP_START_FAILED**: *`number`* = 20
 
-*Defined in [nm/types/index.ts:477](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L477)*
+*Defined in [nm/types/index.ts:477](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L477)*
 
 AutoIP service failed to start
 
@@ -1159,7 +1159,7 @@ ___
 
 **● BR2684_FAILED**: *`number`* = 51
 
-*Defined in [nm/types/index.ts:539](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L539)*
+*Defined in [nm/types/index.ts:539](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L539)*
 
 Problem with the RFC 2684 Ethernet over ADSL bridge
 
@@ -1170,7 +1170,7 @@ ___
 
 **● BT_FAILED**: *`number`* = 44
 
-*Defined in [nm/types/index.ts:525](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L525)*
+*Defined in [nm/types/index.ts:525](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L525)*
 
 The Bluetooth connection failed or timed out
 
@@ -1181,7 +1181,7 @@ ___
 
 **● CARRIER**: *`number`* = 40
 
-*Defined in [nm/types/index.ts:517](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L517)*
+*Defined in [nm/types/index.ts:517](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L517)*
 
 Carrier/link changed
 
@@ -1192,7 +1192,7 @@ ___
 
 **● CONFIG_FAILED**: *`number`* = 4
 
-*Defined in [nm/types/index.ts:445](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L445)*
+*Defined in [nm/types/index.ts:445](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L445)*
 
 The device could not be readied for configuration
 
@@ -1203,7 +1203,7 @@ ___
 
 **● CONNECTION_ASSUMED**: *`number`* = 41
 
-*Defined in [nm/types/index.ts:519](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L519)*
+*Defined in [nm/types/index.ts:519](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L519)*
 
 The device's existing connection was assumed
 
@@ -1214,7 +1214,7 @@ ___
 
 **● CONNECTION_REMOVED**: *`number`* = 38
 
-*Defined in [nm/types/index.ts:513](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L513)*
+*Defined in [nm/types/index.ts:513](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L513)*
 
 The device's active connection disappeared
 
@@ -1225,7 +1225,7 @@ ___
 
 **● DCB_FCOE_FAILED**: *`number`* = 55
 
-*Defined in [nm/types/index.ts:547](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L547)*
+*Defined in [nm/types/index.ts:547](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L547)*
 
 DCB or FCoE setup failed
 
@@ -1236,7 +1236,7 @@ ___
 
 **● DEPENDENCY_FAILED**: *`number`* = 50
 
-*Defined in [nm/types/index.ts:537](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L537)*
+*Defined in [nm/types/index.ts:537](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L537)*
 
 A dependency of the connection failed
 
@@ -1247,7 +1247,7 @@ ___
 
 **● DHCP_ERROR**: *`number`* = 16
 
-*Defined in [nm/types/index.ts:469](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L469)*
+*Defined in [nm/types/index.ts:469](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L469)*
 
 DHCP client error
 
@@ -1258,7 +1258,7 @@ ___
 
 **● DHCP_FAILED**: *`number`* = 17
 
-*Defined in [nm/types/index.ts:471](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L471)*
+*Defined in [nm/types/index.ts:471](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L471)*
 
 DHCP client failed
 
@@ -1269,7 +1269,7 @@ ___
 
 **● DHCP_START_FAILED**: *`number`* = 15
 
-*Defined in [nm/types/index.ts:467](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L467)*
+*Defined in [nm/types/index.ts:467](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L467)*
 
 DHCP client failed to start
 
@@ -1280,7 +1280,7 @@ ___
 
 **● FIRMWARE_MISSING**: *`number`* = 35
 
-*Defined in [nm/types/index.ts:507](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L507)*
+*Defined in [nm/types/index.ts:507](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L507)*
 
 Necessary firmware for the device may be missing
 
@@ -1291,7 +1291,7 @@ ___
 
 **● GSM_APN_FAILED**: *`number`* = 29
 
-*Defined in [nm/types/index.ts:495](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L495)*
+*Defined in [nm/types/index.ts:495](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L495)*
 
 Failed to select the specified APN
 
@@ -1302,7 +1302,7 @@ ___
 
 **● GSM_PIN_CHECK_FAILED**: *`number`* = 34
 
-*Defined in [nm/types/index.ts:505](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L505)*
+*Defined in [nm/types/index.ts:505](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L505)*
 
 PIN check failed
 
@@ -1313,7 +1313,7 @@ ___
 
 **● GSM_REGISTRATION_DENIED**: *`number`* = 31
 
-*Defined in [nm/types/index.ts:499](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L499)*
+*Defined in [nm/types/index.ts:499](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L499)*
 
 Network registration denied
 
@@ -1324,7 +1324,7 @@ ___
 
 **● GSM_REGISTRATION_FAILED**: *`number`* = 33
 
-*Defined in [nm/types/index.ts:503](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L503)*
+*Defined in [nm/types/index.ts:503](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L503)*
 
 Failed to register with the requested network
 
@@ -1335,7 +1335,7 @@ ___
 
 **● GSM_REGISTRATION_NOT_SEARCHING**: *`number`* = 30
 
-*Defined in [nm/types/index.ts:497](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L497)*
+*Defined in [nm/types/index.ts:497](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L497)*
 
 Not searching for networks
 
@@ -1346,7 +1346,7 @@ ___
 
 **● GSM_REGISTRATION_TIMEOUT**: *`number`* = 32
 
-*Defined in [nm/types/index.ts:501](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L501)*
+*Defined in [nm/types/index.ts:501](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L501)*
 
 Network registration timed out
 
@@ -1357,7 +1357,7 @@ ___
 
 **● GSM_SIM_NOT_INSERTED**: *`number`* = 45
 
-*Defined in [nm/types/index.ts:527](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L527)*
+*Defined in [nm/types/index.ts:527](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L527)*
 
 GSM Modem's SIM Card not inserted
 
@@ -1368,7 +1368,7 @@ ___
 
 **● GSM_SIM_PIN_REQUIRED**: *`number`* = 46
 
-*Defined in [nm/types/index.ts:529](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L529)*
+*Defined in [nm/types/index.ts:529](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L529)*
 
 GSM Modem's SIM Pin required
 
@@ -1379,7 +1379,7 @@ ___
 
 **● GSM_SIM_PUK_REQUIRED**: *`number`* = 47
 
-*Defined in [nm/types/index.ts:531](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L531)*
+*Defined in [nm/types/index.ts:531](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L531)*
 
 GSM Modem's SIM Puk required
 
@@ -1390,7 +1390,7 @@ ___
 
 **● GSM_SIM_WRONG**: *`number`* = 48
 
-*Defined in [nm/types/index.ts:533](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L533)*
+*Defined in [nm/types/index.ts:533](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L533)*
 
 GSM Modem's SIM wrong
 
@@ -1401,7 +1401,7 @@ ___
 
 **● INFINIBAND_MODE**: *`number`* = 49
 
-*Defined in [nm/types/index.ts:535](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L535)*
+*Defined in [nm/types/index.ts:535](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L535)*
 
 InfiniBand device does not support connected mode
 
@@ -1412,7 +1412,7 @@ ___
 
 **● IP_ADDRESS_DUPLICATE**: *`number`* = 64
 
-*Defined in [nm/types/index.ts:565](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L565)*
+*Defined in [nm/types/index.ts:565](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L565)*
 
 A duplicate IP address was detected
 
@@ -1423,7 +1423,7 @@ ___
 
 **● IP_CONFIG_EXPIRED**: *`number`* = 6
 
-*Defined in [nm/types/index.ts:449](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L449)*
+*Defined in [nm/types/index.ts:449](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L449)*
 
 The IP config is no longer valid
 
@@ -1434,7 +1434,7 @@ ___
 
 **● IP_CONFIG_UNAVAILABLE**: *`number`* = 5
 
-*Defined in [nm/types/index.ts:447](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L447)*
+*Defined in [nm/types/index.ts:447](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L447)*
 
 IP configuration could not be reserved (no available address, timeout, etc)
 
@@ -1445,7 +1445,7 @@ ___
 
 **● IP_METHOD_UNSUPPORTED**: *`number`* = 65
 
-*Defined in [nm/types/index.ts:567](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L567)*
+*Defined in [nm/types/index.ts:567](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L567)*
 
 The selected IP method is not supported
 
@@ -1456,7 +1456,7 @@ ___
 
 **● MODEM_AVAILABLE**: *`number`* = 58
 
-*Defined in [nm/types/index.ts:553](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L553)*
+*Defined in [nm/types/index.ts:553](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L553)*
 
 Modem now ready and available
 
@@ -1467,7 +1467,7 @@ ___
 
 **● MODEM_BUSY**: *`number`* = 23
 
-*Defined in [nm/types/index.ts:483](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L483)*
+*Defined in [nm/types/index.ts:483](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L483)*
 
 The line is busy
 
@@ -1478,7 +1478,7 @@ ___
 
 **● MODEM_DIAL_FAILED**: *`number`* = 27
 
-*Defined in [nm/types/index.ts:491](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L491)*
+*Defined in [nm/types/index.ts:491](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L491)*
 
 The dialing attempt failed
 
@@ -1489,7 +1489,7 @@ ___
 
 **● MODEM_DIAL_TIMEOUT**: *`number`* = 26
 
-*Defined in [nm/types/index.ts:489](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L489)*
+*Defined in [nm/types/index.ts:489](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L489)*
 
 The dialing request timed out
 
@@ -1500,7 +1500,7 @@ ___
 
 **● MODEM_FAILED**: *`number`* = 57
 
-*Defined in [nm/types/index.ts:551](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L551)*
+*Defined in [nm/types/index.ts:551](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L551)*
 
 Modem failed or no longer available
 
@@ -1511,7 +1511,7 @@ ___
 
 **● MODEM_INIT_FAILED**: *`number`* = 28
 
-*Defined in [nm/types/index.ts:493](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L493)*
+*Defined in [nm/types/index.ts:493](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L493)*
 
 Modem initialization failed
 
@@ -1522,7 +1522,7 @@ ___
 
 **● MODEM_MANAGER_UNAVAILABLE**: *`number`* = 52
 
-*Defined in [nm/types/index.ts:541](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L541)*
+*Defined in [nm/types/index.ts:541](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L541)*
 
 ModemManager not running
 
@@ -1533,7 +1533,7 @@ ___
 
 **● MODEM_NOT_FOUND**: *`number`* = 43
 
-*Defined in [nm/types/index.ts:523](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L523)*
+*Defined in [nm/types/index.ts:523](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L523)*
 
 The modem could not be found
 
@@ -1544,7 +1544,7 @@ ___
 
 **● MODEM_NO_CARRIER**: *`number`* = 25
 
-*Defined in [nm/types/index.ts:487](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L487)*
+*Defined in [nm/types/index.ts:487](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L487)*
 
 No carrier could be established
 
@@ -1555,7 +1555,7 @@ ___
 
 **● MODEM_NO_DIAL_TONE**: *`number`* = 24
 
-*Defined in [nm/types/index.ts:485](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L485)*
+*Defined in [nm/types/index.ts:485](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L485)*
 
 No dial tone
 
@@ -1566,7 +1566,7 @@ ___
 
 **● NEW_ACTIVATION**: *`number`* = 60
 
-*Defined in [nm/types/index.ts:557](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L557)*
+*Defined in [nm/types/index.ts:557](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L557)*
 
 New connection activation was enqueued
 
@@ -1577,7 +1577,7 @@ ___
 
 **● NONE**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:437](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L437)*
+*Defined in [nm/types/index.ts:437](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L437)*
 
 No reason given
 
@@ -1588,7 +1588,7 @@ ___
 
 **● NOW_MANAGED**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:441](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L441)*
+*Defined in [nm/types/index.ts:441](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L441)*
 
 Device is now managed
 
@@ -1599,7 +1599,7 @@ ___
 
 **● NOW_UNMANAGED**: *`number`* = 3
 
-*Defined in [nm/types/index.ts:443](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L443)*
+*Defined in [nm/types/index.ts:443](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L443)*
 
 Device is now unmanaged
 
@@ -1610,7 +1610,7 @@ ___
 
 **● NO_SECRETS**: *`number`* = 7
 
-*Defined in [nm/types/index.ts:451](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L451)*
+*Defined in [nm/types/index.ts:451](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L451)*
 
 Secrets were required, but not provided
 
@@ -1621,7 +1621,7 @@ ___
 
 **● OVSDB_FAILED**: *`number`* = 63
 
-*Defined in [nm/types/index.ts:563](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L563)*
+*Defined in [nm/types/index.ts:563](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L563)*
 
 Problem communicating with OpenVSwitch database
 
@@ -1632,7 +1632,7 @@ ___
 
 **● PARENT_CHANGED**: *`number`* = 61
 
-*Defined in [nm/types/index.ts:559](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L559)*
+*Defined in [nm/types/index.ts:559](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L559)*
 
 The device's parent changed
 
@@ -1643,7 +1643,7 @@ ___
 
 **● PARENT_MANAGED_CHANGED**: *`number`* = 62
 
-*Defined in [nm/types/index.ts:561](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L561)*
+*Defined in [nm/types/index.ts:561](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L561)*
 
 The device parent's management changed
 
@@ -1654,7 +1654,7 @@ ___
 
 **● PPP_DISCONNECT**: *`number`* = 13
 
-*Defined in [nm/types/index.ts:463](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L463)*
+*Defined in [nm/types/index.ts:463](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L463)*
 
 PPP service disconnected
 
@@ -1665,7 +1665,7 @@ ___
 
 **● PPP_FAILED**: *`number`* = 14
 
-*Defined in [nm/types/index.ts:465](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L465)*
+*Defined in [nm/types/index.ts:465](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L465)*
 
 PPP failed
 
@@ -1676,7 +1676,7 @@ ___
 
 **● PPP_START_FAILED**: *`number`* = 12
 
-*Defined in [nm/types/index.ts:461](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L461)*
+*Defined in [nm/types/index.ts:461](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L461)*
 
 PPP service failed to start
 
@@ -1687,7 +1687,7 @@ ___
 
 **● REMOVED**: *`number`* = 36
 
-*Defined in [nm/types/index.ts:509](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L509)*
+*Defined in [nm/types/index.ts:509](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L509)*
 
 The device was removed
 
@@ -1698,7 +1698,7 @@ ___
 
 **● SECONDARY_CONNECTION_FAILED**: *`number`* = 54
 
-*Defined in [nm/types/index.ts:545](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L545)*
+*Defined in [nm/types/index.ts:545](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L545)*
 
 A secondary connection of the base connection failed
 
@@ -1709,7 +1709,7 @@ ___
 
 **● SHARED_FAILED**: *`number`* = 19
 
-*Defined in [nm/types/index.ts:475](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L475)*
+*Defined in [nm/types/index.ts:475](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L475)*
 
 Shared connection service failed
 
@@ -1720,7 +1720,7 @@ ___
 
 **● SHARED_START_FAILED**: *`number`* = 18
 
-*Defined in [nm/types/index.ts:473](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L473)*
+*Defined in [nm/types/index.ts:473](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L473)*
 
 Shared connection service failed to start
 
@@ -1731,7 +1731,7 @@ ___
 
 **● SIM_PIN_INCORRECT**: *`number`* = 59
 
-*Defined in [nm/types/index.ts:555](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L555)*
+*Defined in [nm/types/index.ts:555](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L555)*
 
 SIM PIN was incorrect
 
@@ -1742,7 +1742,7 @@ ___
 
 **● SLEEPING**: *`number`* = 37
 
-*Defined in [nm/types/index.ts:511](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L511)*
+*Defined in [nm/types/index.ts:511](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L511)*
 
 NetworkManager went to sleep
 
@@ -1753,7 +1753,7 @@ ___
 
 **● SSID_NOT_FOUND**: *`number`* = 53
 
-*Defined in [nm/types/index.ts:543](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L543)*
+*Defined in [nm/types/index.ts:543](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L543)*
 
 The WiFi network could not be found
 
@@ -1764,7 +1764,7 @@ ___
 
 **● SUPPLICANT_AVAILABLE**: *`number`* = 42
 
-*Defined in [nm/types/index.ts:521](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L521)*
+*Defined in [nm/types/index.ts:521](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L521)*
 
 The supplicant is now available
 
@@ -1775,7 +1775,7 @@ ___
 
 **● SUPPLICANT_CONFIG_FAILED**: *`number`* = 9
 
-*Defined in [nm/types/index.ts:455](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L455)*
+*Defined in [nm/types/index.ts:455](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L455)*
 
 802.1x supplicant configuration failed
 
@@ -1786,7 +1786,7 @@ ___
 
 **● SUPPLICANT_DISCONNECT**: *`number`* = 8
 
-*Defined in [nm/types/index.ts:453](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L453)*
+*Defined in [nm/types/index.ts:453](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L453)*
 
 802.1x supplicant disconnected
 
@@ -1797,7 +1797,7 @@ ___
 
 **● SUPPLICANT_FAILED**: *`number`* = 10
 
-*Defined in [nm/types/index.ts:457](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L457)*
+*Defined in [nm/types/index.ts:457](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L457)*
 
 802.1x supplicant failed
 
@@ -1808,7 +1808,7 @@ ___
 
 **● SUPPLICANT_TIMEOUT**: *`number`* = 11
 
-*Defined in [nm/types/index.ts:459](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L459)*
+*Defined in [nm/types/index.ts:459](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L459)*
 
 802.1x supplicant took too long to authenticate
 
@@ -1819,7 +1819,7 @@ ___
 
 **● TEAMD_CONTROL_FAILED**: *`number`* = 56
 
-*Defined in [nm/types/index.ts:549](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L549)*
+*Defined in [nm/types/index.ts:549](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L549)*
 
 Teamd control failed
 
@@ -1830,7 +1830,7 @@ ___
 
 **● UNKNOWN**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:439](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L439)*
+*Defined in [nm/types/index.ts:439](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L439)*
 
 Unknown error
 
@@ -1841,7 +1841,7 @@ ___
 
 **● USER_REQUESTED**: *`number`* = 39
 
-*Defined in [nm/types/index.ts:515](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L515)*
+*Defined in [nm/types/index.ts:515](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L515)*
 
 Device disconnected by user or client
 
@@ -1854,7 +1854,7 @@ ___
 
 **DEVICE_TYPE**: *`object`*
 
-*Defined in [nm/types/index.ts:110](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L110)*
+*Defined in [nm/types/index.ts:110](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L110)*
 
 NMDeviceType
 *__enum__*: {Number}
@@ -1865,7 +1865,7 @@ NMDeviceType
 
 **● ADSL**: *`number`* = 12
 
-*Defined in [nm/types/index.ts:141](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L141)*
+*Defined in [nm/types/index.ts:141](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L141)*
 
 ADSL modem
 
@@ -1876,7 +1876,7 @@ ___
 
 **● BOND**: *`number`* = 10
 
-*Defined in [nm/types/index.ts:137](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L137)*
+*Defined in [nm/types/index.ts:137](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L137)*
 
 A bond master interface
 
@@ -1887,7 +1887,7 @@ ___
 
 **● BRIDGE**: *`number`* = 13
 
-*Defined in [nm/types/index.ts:143](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L143)*
+*Defined in [nm/types/index.ts:143](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L143)*
 
 A bridge master interface
 
@@ -1898,7 +1898,7 @@ ___
 
 **● BT**: *`number`* = 5
 
-*Defined in [nm/types/index.ts:124](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L124)*
+*Defined in [nm/types/index.ts:124](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L124)*
 
 A Bluetooth device supporting PAN or DUN access protocols
 
@@ -1909,7 +1909,7 @@ ___
 
 **● DUMMY**: *`number`* = 22
 
-*Defined in [nm/types/index.ts:159](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L159)*
+*Defined in [nm/types/index.ts:159](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L159)*
 
 A dummy interface
 
@@ -1920,7 +1920,7 @@ ___
 
 **● ETHERNET**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:116](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L116)*
+*Defined in [nm/types/index.ts:116](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L116)*
 
 A wired ethernet device
 
@@ -1931,7 +1931,7 @@ ___
 
 **● GENERIC**: *`number`* = 14
 
-*Defined in [nm/types/index.ts:114](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L114)*
+*Defined in [nm/types/index.ts:114](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L114)*
 
 Generic support for unrecognized device types
 
@@ -1942,7 +1942,7 @@ ___
 
 **● INFINIBAND**: *`number`* = 9
 
-*Defined in [nm/types/index.ts:135](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L135)*
+*Defined in [nm/types/index.ts:135](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L135)*
 
 An IP-over-InfiniBand device
 
@@ -1953,7 +1953,7 @@ ___
 
 **● IP_TUNNEL**: *`number`* = 17
 
-*Defined in [nm/types/index.ts:149](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L149)*
+*Defined in [nm/types/index.ts:149](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L149)*
 
 A IP tunnel interface
 
@@ -1964,7 +1964,7 @@ ___
 
 **● MACSEC**: *`number`* = 21
 
-*Defined in [nm/types/index.ts:157](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L157)*
+*Defined in [nm/types/index.ts:157](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L157)*
 
 A MACsec interface
 
@@ -1975,7 +1975,7 @@ ___
 
 **● MACVLAN**: *`number`* = 18
 
-*Defined in [nm/types/index.ts:151](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L151)*
+*Defined in [nm/types/index.ts:151](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L151)*
 
 A MACVLAN interface
 
@@ -1986,7 +1986,7 @@ ___
 
 **● MODEM**: *`number`* = 8
 
-*Defined in [nm/types/index.ts:133](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L133)*
+*Defined in [nm/types/index.ts:133](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L133)*
 
 A modem supporting analog telephone, CDMA/EVDO, GSM/UMTS, or LTE network access protocols
 
@@ -1997,7 +1997,7 @@ ___
 
 **● OLPC_MESH**: *`number`* = 6
 
-*Defined in [nm/types/index.ts:126](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L126)*
+*Defined in [nm/types/index.ts:126](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L126)*
 
 An OLPC XO mesh networking device
 
@@ -2008,7 +2008,7 @@ ___
 
 **● OVS_BRIDGE**: *`number`* = 26
 
-*Defined in [nm/types/index.ts:167](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L167)*
+*Defined in [nm/types/index.ts:167](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L167)*
 
 A OpenVSwitch bridge
 
@@ -2019,7 +2019,7 @@ ___
 
 **● OVS_INTERFACE**: *`number`* = 24
 
-*Defined in [nm/types/index.ts:163](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L163)*
+*Defined in [nm/types/index.ts:163](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L163)*
 
 A OpenVSwitch interface
 
@@ -2030,7 +2030,7 @@ ___
 
 **● OVS_PORT**: *`number`* = 25
 
-*Defined in [nm/types/index.ts:165](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L165)*
+*Defined in [nm/types/index.ts:165](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L165)*
 
 A OpenVSwitch port
 
@@ -2041,7 +2041,7 @@ ___
 
 **● PPP**: *`number`* = 23
 
-*Defined in [nm/types/index.ts:161](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L161)*
+*Defined in [nm/types/index.ts:161](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L161)*
 
 A PPP interface
 
@@ -2052,7 +2052,7 @@ ___
 
 **● TEAM**: *`number`* = 15
 
-*Defined in [nm/types/index.ts:145](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L145)*
+*Defined in [nm/types/index.ts:145](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L145)*
 
 A team master interface
 
@@ -2063,7 +2063,7 @@ ___
 
 **● TUN**: *`number`* = 16
 
-*Defined in [nm/types/index.ts:147](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L147)*
+*Defined in [nm/types/index.ts:147](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L147)*
 
 A TUN or TAP interface
 
@@ -2074,7 +2074,7 @@ ___
 
 **● UNKNOWN**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:112](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L112)*
+*Defined in [nm/types/index.ts:112](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L112)*
 
 Unknown device
 
@@ -2085,7 +2085,7 @@ ___
 
 **● UNUSED1**: *`number`* = 3
 
-*Defined in [nm/types/index.ts:120](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L120)*
+*Defined in [nm/types/index.ts:120](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L120)*
 
 Not used
 
@@ -2096,7 +2096,7 @@ ___
 
 **● UNUSED2**: *`number`* = 4
 
-*Defined in [nm/types/index.ts:122](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L122)*
+*Defined in [nm/types/index.ts:122](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L122)*
 
 Not used
 
@@ -2107,7 +2107,7 @@ ___
 
 **● VETH**: *`number`* = 20
 
-*Defined in [nm/types/index.ts:155](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L155)*
+*Defined in [nm/types/index.ts:155](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L155)*
 
 A VETH interface
 
@@ -2118,7 +2118,7 @@ ___
 
 **● VLAN**: *`number`* = 11
 
-*Defined in [nm/types/index.ts:139](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L139)*
+*Defined in [nm/types/index.ts:139](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L139)*
 
 An 802.1Q VLAN interface
 
@@ -2129,7 +2129,7 @@ ___
 
 **● VXLAN**: *`number`* = 19
 
-*Defined in [nm/types/index.ts:153](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L153)*
+*Defined in [nm/types/index.ts:153](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L153)*
 
 A VXLAN interface
 
@@ -2140,7 +2140,7 @@ ___
 
 **● WIFI**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:118](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L118)*
+*Defined in [nm/types/index.ts:118](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L118)*
 
 An 802.11 WiFi device
 
@@ -2151,7 +2151,7 @@ ___
 
 **● WIMAX**: *`number`* = 7
 
-*Defined in [nm/types/index.ts:128](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L128)*
+*Defined in [nm/types/index.ts:128](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L128)*
 
 An 802.16e Mobile WiMAX broadband device
 
@@ -2164,7 +2164,7 @@ ___
 
 **IP_TUNNEL_MODE**: *`object`*
 
-*Defined in [nm/types/index.ts:765](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L765)*
+*Defined in [nm/types/index.ts:765](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L765)*
 
 NMIPTunnelMode Since: v1.2
 *__enum__*: {Number}
@@ -2175,7 +2175,7 @@ NMIPTunnelMode Since: v1.2
 
 **● GRE**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:771](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L771)*
+*Defined in [nm/types/index.ts:771](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L771)*
 
 GRE tunnel
 
@@ -2186,7 +2186,7 @@ ___
 
 **● IP6GRE**: *`number`* = 8
 
-*Defined in [nm/types/index.ts:783](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L783)*
+*Defined in [nm/types/index.ts:783](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L783)*
 
 IPv6 GRE tunnel
 
@@ -2197,7 +2197,7 @@ ___
 
 **● IP6IP6**: *`number`* = 6
 
-*Defined in [nm/types/index.ts:779](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L779)*
+*Defined in [nm/types/index.ts:779](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L779)*
 
 IPv6 in IPv6 tunnel
 
@@ -2208,7 +2208,7 @@ ___
 
 **● IPIP**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:769](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L769)*
+*Defined in [nm/types/index.ts:769](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L769)*
 
 IP in IP tunnel
 
@@ -2219,7 +2219,7 @@ ___
 
 **● IPIP6**: *`number`* = 7
 
-*Defined in [nm/types/index.ts:781](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L781)*
+*Defined in [nm/types/index.ts:781](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L781)*
 
 IPv4 in IPv6 tunnel
 
@@ -2230,7 +2230,7 @@ ___
 
 **● ISATAP**: *`number`* = 4
 
-*Defined in [nm/types/index.ts:775](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L775)*
+*Defined in [nm/types/index.ts:775](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L775)*
 
 ISATAP tunnel
 
@@ -2241,7 +2241,7 @@ ___
 
 **● SIT**: *`number`* = 3
 
-*Defined in [nm/types/index.ts:773](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L773)*
+*Defined in [nm/types/index.ts:773](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L773)*
 
 SIT tunnel
 
@@ -2252,7 +2252,7 @@ ___
 
 **● UNKNOWN**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:767](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L767)*
+*Defined in [nm/types/index.ts:767](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L767)*
 
 Unknown/unset tunnel mode
 
@@ -2263,7 +2263,7 @@ ___
 
 **● VTI**: *`number`* = 5
 
-*Defined in [nm/types/index.ts:777](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L777)*
+*Defined in [nm/types/index.ts:777](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L777)*
 
 VTI tunnel
 
@@ -2274,7 +2274,7 @@ ___
 
 **● VTI6**: *`number`* = 9
 
-*Defined in [nm/types/index.ts:785](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L785)*
+*Defined in [nm/types/index.ts:785](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L785)*
 
 IPv6 VTI tunnel
 
@@ -2287,7 +2287,7 @@ ___
 
 **METERED**: *`object`*
 
-*Defined in [nm/types/index.ts:575](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L575)*
+*Defined in [nm/types/index.ts:575](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L575)*
 
 NMMetered Since: v1.2
 *__enum__*: {Number}
@@ -2298,7 +2298,7 @@ NMMetered Since: v1.2
 
 **● GUESS_NO**: *`number`* = 4
 
-*Defined in [nm/types/index.ts:585](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L585)*
+*Defined in [nm/types/index.ts:585](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L585)*
 
 Not metered, the value was guessed
 
@@ -2309,7 +2309,7 @@ ___
 
 **● GUESS_YES**: *`number`* = 3
 
-*Defined in [nm/types/index.ts:583](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L583)*
+*Defined in [nm/types/index.ts:583](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L583)*
 
 Metered, the value was guessed
 
@@ -2320,7 +2320,7 @@ ___
 
 **● NO**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:581](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L581)*
+*Defined in [nm/types/index.ts:581](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L581)*
 
 Not metered, the value was statically set
 
@@ -2331,7 +2331,7 @@ ___
 
 **● UNKNOWN**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:577](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L577)*
+*Defined in [nm/types/index.ts:577](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L577)*
 
 The metered status is unknown
 
@@ -2342,7 +2342,7 @@ ___
 
 **● YES**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:579](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L579)*
+*Defined in [nm/types/index.ts:579](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L579)*
 
 Metered, the value was statically set
 
@@ -2355,7 +2355,7 @@ ___
 
 **MODE_802_11**: *`object`*
 
-*Defined in [nm/types/index.ts:271](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L271)*
+*Defined in [nm/types/index.ts:271](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L271)*
 
 NM80211Mode
 *__enum__*: {Number}
@@ -2368,7 +2368,7 @@ NM80211Mode
 
 **● ADHOC**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:279](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L279)*
+*Defined in [nm/types/index.ts:279](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L279)*
 
 For both devices and access point objects, indicates the object is part of an Ad-Hoc 802.11 network without a central coordinating access point.
 
@@ -2379,7 +2379,7 @@ ___
 
 **● AP**: *`number`* = 3
 
-*Defined in [nm/types/index.ts:292](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L292)*
+*Defined in [nm/types/index.ts:292](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L292)*
 
 The device is an access point/hotspot. Not valid for access point objects; used only for hotspot mode on the local machine.
 
@@ -2390,7 +2390,7 @@ ___
 
 **● INFRA**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:286](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L286)*
+*Defined in [nm/types/index.ts:286](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L286)*
 
 The device or access point is in infrastructure mode. For devices, this indicates the device is an 802.11 client/station. For access point objects, this indicates the object is an access point that provides connectivity to clients.
 
@@ -2401,7 +2401,7 @@ ___
 
 **● UNKNOWN**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:273](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L273)*
+*Defined in [nm/types/index.ts:273](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L273)*
 
 The device or access point mode is unknown
 
@@ -2414,7 +2414,7 @@ ___
 
 **ROLLBACK_RESULT**: *`object`*
 
-*Defined in [nm/types/index.ts:824](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L824)*
+*Defined in [nm/types/index.ts:824](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L824)*
 
 NMRollbackResult Since: v1.4
 *__enum__*: {Number}
@@ -2425,7 +2425,7 @@ NMRollbackResult Since: v1.4
 
 **● ERR_DEVICE_UNMANAGED**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:830](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L830)*
+*Defined in [nm/types/index.ts:830](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L830)*
 
 The device is now unmanaged.
 
@@ -2436,7 +2436,7 @@ ___
 
 **● ERR_FAILED**: *`number`* = 3
 
-*Defined in [nm/types/index.ts:832](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L832)*
+*Defined in [nm/types/index.ts:832](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L832)*
 
 Other errors during rollback.
 
@@ -2447,7 +2447,7 @@ ___
 
 **● ERR_NO_DEVICE**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:828](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L828)*
+*Defined in [nm/types/index.ts:828](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L828)*
 
 The device no longer exists.
 
@@ -2458,7 +2458,7 @@ ___
 
 **● OK**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:826](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L826)*
+*Defined in [nm/types/index.ts:826](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L826)*
 
 The rollback succeeded.
 
@@ -2471,7 +2471,7 @@ ___
 
 **SECRET_AGENT_CAPABILITY**: *`object`*
 
-*Defined in [nm/types/index.ts:747](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L747)*
+*Defined in [nm/types/index.ts:747](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L747)*
 
 NMSecretAgentCapabilities NOTE: NMSecretAgentCapabilities indicate various capabilities of the agent
 *__enum__*: {Number}
@@ -2482,7 +2482,7 @@ NMSecretAgentCapabilities NOTE: NMSecretAgentCapabilities indicate various capab
 
 **● NONE**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:752](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L752)*
+*Defined in [nm/types/index.ts:752](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L752)*
 
 The agent supports no special capabilities
 *__type__*: {Number}
@@ -2494,7 +2494,7 @@ ___
 
 **● VPN_HINTS**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:757](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L757)*
+*Defined in [nm/types/index.ts:757](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L757)*
 
 The agent supports passing hints to VPN plugin authentication dialogs.
 *__type__*: {Number}
@@ -2508,7 +2508,7 @@ ___
 
 **SECRET_AGENT_GET_SECRETS**: *`object`*
 
-*Defined in [nm/types/index.ts:696](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L696)*
+*Defined in [nm/types/index.ts:696](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L696)*
 
 NMSecretAgentGetSecretsFlags NOTE: NMSecretAgentGetSecretsFlags values modify the behavior of a GetSecrets request
 *__enum__*: {Number}
@@ -2519,7 +2519,7 @@ NMSecretAgentGetSecretsFlags NOTE: NMSecretAgentGetSecretsFlags values modify th
 
 **● ALLOW_INTERACTION**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:710](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L710)*
+*Defined in [nm/types/index.ts:710](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L710)*
 
 Allows the request to interact with the user, possibly prompting via UI for secrets if any are required, or if none are found in persistent storage.
 *__type__*: {Number}
@@ -2531,7 +2531,7 @@ ___
 
 **● NONE**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:703](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L703)*
+*Defined in [nm/types/index.ts:703](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L703)*
 
 No special behavior; by default no user interaction is allowed and requests for secrets are fulfilled from persistent storage, or if no secrets are available an error is returned.
 *__type__*: {Number}
@@ -2543,7 +2543,7 @@ ___
 
 **● NO_ERRORS**: *`number`* = 1073741824
 
-*Defined in [nm/types/index.ts:739](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L739)*
+*Defined in [nm/types/index.ts:739](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L739)*
 
 Internal flag, not part of the D-Bus API.
 *__type__*: {Number}
@@ -2555,7 +2555,7 @@ ___
 
 **● ONLY_SYSTEM**: *`number`* = 2147483648
 
-*Defined in [nm/types/index.ts:734](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L734)*
+*Defined in [nm/types/index.ts:734](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L734)*
 
 Internal flag, not part of the D-Bus API.
 *__type__*: {Number}
@@ -2567,7 +2567,7 @@ ___
 
 **● REQUEST_NEW**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:717](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L717)*
+*Defined in [nm/types/index.ts:717](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L717)*
 
 Explicitly prompt for new secrets from the user. This flag signals that NetworkManager thinks any existing secrets are invalid or wrong. This flag implies that interaction is allowed.
 *__type__*: {Number}
@@ -2579,7 +2579,7 @@ ___
 
 **● USER_REQUESTED**: *`number`* = 4
 
-*Defined in [nm/types/index.ts:723](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L723)*
+*Defined in [nm/types/index.ts:723](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L723)*
 
 Set if the request was initiated by user-requested action via the D-Bus interface, as opposed to automatically initiated by NetworkManager in response to scan results or carrier changes.
 *__type__*: {Number}
@@ -2591,7 +2591,7 @@ ___
 
 **● WPS_PBC_ACTIVE**: *`number`* = 8
 
-*Defined in [nm/types/index.ts:729](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L729)*
+*Defined in [nm/types/index.ts:729](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L729)*
 
 Indicates that WPS enrollment is active with PBC method. The agent may suggest that the user pushes a button on the router instead of supplying a PSK.
 *__type__*: {Number}
@@ -2605,7 +2605,7 @@ ___
 
 **SETTINGS_UPDATE2**: *`object`*
 
-*Defined in [nm/types/index.ts:884](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L884)*
+*Defined in [nm/types/index.ts:884](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L884)*
 
 NMSettingsUpdate2Flags Since: v1.10.2
 *__enum__*: {Number}
@@ -2616,7 +2616,7 @@ NMSettingsUpdate2Flags Since: v1.10.2
 
 **● BLOCK_AUTOCONNECT**: *`null`* =  null
 
-*Defined in [nm/types/index.ts:942](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L942)*
+*Defined in [nm/types/index.ts:942](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L942)*
 
 Usually, when the connection has autoconnect enabled and is modified, it becomes elegible to autoconnect right away. Setting this flag, disables autoconnect until the connection is manually activated.
 *__type__*: {Number}
@@ -2628,7 +2628,7 @@ ___
 
 **● IN_MEMORY**: *`null`* =  null
 
-*Defined in [nm/types/index.ts:904](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L904)*
+*Defined in [nm/types/index.ts:904](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L904)*
 
 To make the connection in-memory only. If the connection was previously persistent, the corresponding file on disk is not deleted but merely the connection is decoupled from the file on disk. If you later delete an in-memory connection, the connection on disk will be deleted as well.
 *__type__*: {Number}
@@ -2640,7 +2640,7 @@ ___
 
 **● IN_MEMORY_DETACHED**: *`null`* =  null
 
-*Defined in [nm/types/index.ts:917](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L917)*
+*Defined in [nm/types/index.ts:917](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L917)*
 
 This is like @NM\_SETTINGS\_UPDATE2\_FLAG\_IN\_MEMORY, but if the connection has a corresponding file on disk, the association between the connection and the file is forgotten but the file is not modified. The difference to %NM\_SETTINGS\_UPDATE2\_FLAG\_IN\_MEMORY is if you later save the connection again to disk, a new file name will be chosen without overwriting the remaining file on disk. Also, if you delete the connection later, the file on disk will not be deleted.
 *__type__*: {Number}
@@ -2652,7 +2652,7 @@ ___
 
 **● IN_MEMORY_ONLY**: *`null`* =  null
 
-*Defined in [nm/types/index.ts:924](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L924)*
+*Defined in [nm/types/index.ts:924](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L924)*
 
 This is like @NM\_SETTINGS\_UPDATE2\_FLAG\_IN_MEMORY, but if the connection has a corresponding file on disk, the file on disk will be deleted.
 *__type__*: {Number}
@@ -2664,7 +2664,7 @@ ___
 
 **● NONE**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:889](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L889)*
+*Defined in [nm/types/index.ts:889](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L889)*
 
 An alias for numeric zero, no flags set.
 *__type__*: {Number}
@@ -2676,7 +2676,7 @@ ___
 
 **● TO_DISK**: *`null`* =  null
 
-*Defined in [nm/types/index.ts:894](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L894)*
+*Defined in [nm/types/index.ts:894](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L894)*
 
 To persist the connection to disk.
 *__type__*: {Number}
@@ -2688,7 +2688,7 @@ ___
 
 **● VOLATILE**: *`null`* =  null
 
-*Defined in [nm/types/index.ts:935](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L935)*
+*Defined in [nm/types/index.ts:935](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L935)*
 
 This can be specified with either %NM\_SETTINGS\_UPDATE2\_FLAG\_IN\_MEMORY\_DETACHED or %NM\_SETTINGS\_UPDATE2\_FLAG\_IN\_MEMORY\_ONLY. After making the connection in-memory only, the connection is marked as volatile. That means, if the connection is currently not active it will be deleted right away. Otherwise, it is marked to for deletion once the connection deactivates. A volatile connection cannot autoactivate again (because it's about to be deleted), but a manual activation will clear the volatile flag.
 *__type__*: {Number}
@@ -2702,7 +2702,7 @@ ___
 
 **STATE**: *`object`*
 
-*Defined in [nm/types/index.ts:34](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L34)*
+*Defined in [nm/types/index.ts:34](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L34)*
 
 NMState
 *__enum__*: {Number}
@@ -2713,7 +2713,7 @@ NMState
 
 **● ASLEEP**: *`number`* = 10
 
-*Defined in [nm/types/index.ts:44](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L44)*
+*Defined in [nm/types/index.ts:44](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L44)*
 
 Networking is not enabled; System is being suspended or resumed
 
@@ -2724,7 +2724,7 @@ ___
 
 **● CONNECTED_GLOBAL**: *`number`* = 70
 
-*Defined in [nm/types/index.ts:72](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L72)*
+*Defined in [nm/types/index.ts:72](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L72)*
 
 Global IPv4 and/or IPv6 Internet connectivity
 
@@ -2735,7 +2735,7 @@ ___
 
 **● CONNECTED_LOCAL**: *`number`* = 50
 
-*Defined in [nm/types/index.ts:62](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L62)*
+*Defined in [nm/types/index.ts:62](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L62)*
 
 Only local IPv4 and/or IPv6 connectivity, but no default route to access the Internet
 
@@ -2746,7 +2746,7 @@ ___
 
 **● CONNECTED_SITE**: *`number`* = 60
 
-*Defined in [nm/types/index.ts:68](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L68)*
+*Defined in [nm/types/index.ts:68](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L68)*
 
 Only site-wide IPv4 and/or IPv6 connectivity; Means a default route is available, but the Internet connectivity check did not succeed
 
@@ -2757,7 +2757,7 @@ ___
 
 **● CONNECTING**: *`number`* = 40
 
-*Defined in [nm/types/index.ts:57](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L57)*
+*Defined in [nm/types/index.ts:57](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L57)*
 
 Network connection is being started
 
@@ -2768,7 +2768,7 @@ ___
 
 **● DISCONNECTED**: *`number`* = 20
 
-*Defined in [nm/types/index.ts:48](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L48)*
+*Defined in [nm/types/index.ts:48](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L48)*
 
 No active network connection
 
@@ -2779,7 +2779,7 @@ ___
 
 **● DISCONNECTING**: *`number`* = 30
 
-*Defined in [nm/types/index.ts:53](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L53)*
+*Defined in [nm/types/index.ts:53](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L53)*
 
 Network connections are being cleaned up; Applications should tear down their network sessions
 
@@ -2790,7 +2790,7 @@ ___
 
 **● UNKNOWN**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:39](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L39)*
+*Defined in [nm/types/index.ts:39](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L39)*
 
 Networking state is unknown; Indicates a daemon error
 
@@ -2803,7 +2803,7 @@ ___
 
 **WIFI_DEVICE_CAP**: *`object`*
 
-*Defined in [nm/types/index.ts:191](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L191)*
+*Defined in [nm/types/index.ts:191](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L191)*
 
 NMDeviceWifiCapabilities
 *__enum__*: {Number}
@@ -2814,7 +2814,7 @@ NMDeviceWifiCapabilities
 
 **● ADHOC**: *`number`* = 128
 
-*Defined in [nm/types/index.ts:209](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L209)*
+*Defined in [nm/types/index.ts:209](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L209)*
 
 Device supports Ad-Hoc mode
 
@@ -2825,7 +2825,7 @@ ___
 
 **● AP**: *`number`* = 64
 
-*Defined in [nm/types/index.ts:207](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L207)*
+*Defined in [nm/types/index.ts:207](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L207)*
 
 Device supports Access Point mode
 
@@ -2836,7 +2836,7 @@ ___
 
 **● CIPHER_CCMP**: *`number`* = 8
 
-*Defined in [nm/types/index.ts:201](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L201)*
+*Defined in [nm/types/index.ts:201](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L201)*
 
 Device supports AES/CCMP encryption
 
@@ -2847,7 +2847,7 @@ ___
 
 **● CIPHER_TKIP**: *`number`* = 4
 
-*Defined in [nm/types/index.ts:199](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L199)*
+*Defined in [nm/types/index.ts:199](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L199)*
 
 Device supports TKIP encryption
 
@@ -2858,7 +2858,7 @@ ___
 
 **● CIPHER_WEP104**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:197](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L197)*
+*Defined in [nm/types/index.ts:197](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L197)*
 
 Device supports 104/128-bit WEP encryption
 
@@ -2869,7 +2869,7 @@ ___
 
 **● CIPHER_WEP40**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:195](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L195)*
+*Defined in [nm/types/index.ts:195](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L195)*
 
 Device supports 40/64-bit WEP encryption
 
@@ -2880,7 +2880,7 @@ ___
 
 **● FREQ_2GHZ**: *`number`* = 512
 
-*Defined in [nm/types/index.ts:213](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L213)*
+*Defined in [nm/types/index.ts:213](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L213)*
 
 Device supports 2.4GHz frequencies
 
@@ -2891,7 +2891,7 @@ ___
 
 **● FREQ_5GHZ**: *`number`* = 1024
 
-*Defined in [nm/types/index.ts:215](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L215)*
+*Defined in [nm/types/index.ts:215](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L215)*
 
 Device supports 5GHz frequencies
 
@@ -2902,7 +2902,7 @@ ___
 
 **● FREQ_VALID**: *`number`* = 256
 
-*Defined in [nm/types/index.ts:211](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L211)*
+*Defined in [nm/types/index.ts:211](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L211)*
 
 Device reports frequency capabilities
 
@@ -2913,7 +2913,7 @@ ___
 
 **● NONE**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:193](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L193)*
+*Defined in [nm/types/index.ts:193](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L193)*
 
 Device has no encryption/authentication capabilities
 
@@ -2924,7 +2924,7 @@ ___
 
 **● RSN**: *`number`* = 32
 
-*Defined in [nm/types/index.ts:205](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L205)*
+*Defined in [nm/types/index.ts:205](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L205)*
 
 Device supports WPA2/RSN authentication
 
@@ -2935,7 +2935,7 @@ ___
 
 **● WPA**: *`number`* = 16
 
-*Defined in [nm/types/index.ts:203](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L203)*
+*Defined in [nm/types/index.ts:203](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L203)*
 
 Device supports WPA1 authentication
 
@@ -2948,7 +2948,7 @@ ___
 
 **WIMAX_NSP_NETWORK_TYPE**: *`object`*
 
-*Defined in [nm/types/index.ts:333](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L333)*
+*Defined in [nm/types/index.ts:333](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L333)*
 
 NMWimaxNspNetworkType
 *__enum__*: {Number}
@@ -2959,7 +2959,7 @@ NMWimaxNspNetworkType
 
 **● HOME**: *`number`* = 1
 
-*Defined in [nm/types/index.ts:337](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L337)*
+*Defined in [nm/types/index.ts:337](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L337)*
 
 Home network
 
@@ -2970,7 +2970,7 @@ ___
 
 **● PARTNER**: *`number`* = 2
 
-*Defined in [nm/types/index.ts:339](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L339)*
+*Defined in [nm/types/index.ts:339](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L339)*
 
 Partner network
 
@@ -2981,7 +2981,7 @@ ___
 
 **● ROAMING_PARTNER**: *`number`* = 3
 
-*Defined in [nm/types/index.ts:341](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L341)*
+*Defined in [nm/types/index.ts:341](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L341)*
 
 Roaming partner network
 
@@ -2992,7 +2992,7 @@ ___
 
 **● UNKNOWN**: *`number`* = 0
 
-*Defined in [nm/types/index.ts:335](https://github.com/resin-io-modules/nm-api/blob/e5ed4e3/lib/nm/types/index.ts#L335)*
+*Defined in [nm/types/index.ts:335](https://github.com/resin-io-modules/nm-api/blob/054c5ca/lib/nm/types/index.ts#L335)*
 
 Unknown network type
 
