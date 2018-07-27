@@ -52,6 +52,15 @@ nm.init()
 
 POST `/connect-network`
 
+Headers:
+
+```HTTP
+{
+  "Accept": "application/json",
+  "Content-Type": "application/json"
+}
+```
+
 Body (JSON):
 
 ```JSON
@@ -165,6 +174,15 @@ HTTP/1.1 500 Internal Server Error
 
 POST `/forget-network`
 
+Headers:
+
+```HTTP
+{
+  "Accept": "application/json",
+  "Content-Type": "application/json"
+}
+```
+
 Body (JSON):
 
 ```JSON
@@ -209,6 +227,15 @@ HTTP/1.1 500 Internal Server Error
 ### Toggle WiFi
 
 POST `/toggle-wifi`
+
+Headers:
+
+```HTTP
+{
+  "Accept": "application/json",
+  "Content-Type": "application/json"
+}
+```
 
 Body (JSON):
 
